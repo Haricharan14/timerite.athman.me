@@ -1,0 +1,176 @@
+/* Body styling */
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cascadia Code', monospace;
+    color: #ffffff;
+    background-image: url('garuda1.png'), url('garuda1.png'); 
+    background-size: 5000px auto; /* No stretching, use the natural width of 5000px */
+    background-position: 0 0, 5000px 0; /* Image 1 at (0,0), Image 2 at (5000px, 0) */
+    animation: scrollBackground 120s linear infinite; /* Scroll left to right in 20 seconds */
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0, 5000px 0; /* Image 1 starts, Image 2 right after it */
+    }
+    100% {
+        background-position: -5000px 0, 0 0; /* Image 1 moves left off-screen, Image 2 takes its place */
+    }
+}
+
+@keyframes horizontalScroll {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%; /* Moves horizontally from left to right */
+    }
+}
+
+
+/* Top bar styling */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    height: 40px;
+    cursor: pointer;
+    text-decoration: none !important; 
+}
+
+.logo:before {
+    content: 'athman';
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: rgb(34, 10, 10);
+    display: block;
+    line-height: 40px;
+}
+
+/* About Link Styling */
+.about {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 40px;
+}
+
+/* Glass container for levels */
+.level-container {  
+    background: rgba(173, 173, 173, 0.271);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 21px 21px 0px 21px;
+    width: 100%;
+    max-width: 660px;
+    margin-bottom: 70px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 400px;
+    height:68px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Level title styling */
+.level-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Glass container for subjects */
+.subject-container {
+    background: rgba(187, 187, 187, 0.402);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0px 0px;
+    width: 106.4%; 
+    box-shadow: 0 0px 0px rgba(157, 157, 157, 0.3);
+    color: #ffffff;
+    font-family: 'Cascadia Code', monospace;
+    font-size: 20px;
+
+}
+
+
+/* Subject list styling */
+.subject-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+
+.subject-item {
+    display: block; /* Makes the subject take full width */
+    width: 100%; /* Full width relative to the subject container */
+    padding: 15px 0;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+    
+    cursor: pointer;
+    transition: background 0s ease;
+    text-align: left;/* Left-align the subject names */
+    padding-left: 20px; /* Add gap from the left */ 
+    color: #1e1e2f;
+}
+
+.subject-item:last-child {
+    
+    border-bottom-left-radius: 20px; /* Curved bottom-left for last item */
+    border-bottom-right-radius: 20px; /* Remove border for last item */
+}
+.subject-item:first-child {
+    border-top-left-radius: 0px; /* Curved top-left for first item */
+    border-top-right-radius: 0px; /* Curved top-right for first item */
+}
+
+
+.subject-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    width: 97.1%;
+    
+
+
+
+}
+a.logo {
+    text-decoration: none !important; 
+}
+
+.logo:before {
+    content: 'athman';
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: rgb(34, 10, 10);
+    display: block;
+    line-height: 40px;
+    text-decoration: none !important; /* This ensures the underline is gone */
+    border-bottom: none !important; /* Removes accidental border-bottom */
+}
