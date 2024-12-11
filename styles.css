@@ -8,8 +8,8 @@ body {
     font-family: 'Cascadia Code', monospace;
     color: #ffffff;
     background-image: url('garuda12.png');
-    background-size: 100%;
-    background-position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
