@@ -87,8 +87,8 @@ a.logo {
 /* Glass container for subjects */
 .subject-container {
     background: rgba(187, 187, 187, 0.402);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 0px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
