@@ -266,3 +266,104 @@ a.logo {
 .rights-footer a:hover {
     text-decoration: underline;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .level-container1 {
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        padding: 15px;
+        height: 36px;
+        border-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 80px;
+    }
+    .level-container2 {
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        padding: 15px;
+        height: 36px;
+        border-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 400px;
+    }
+    .level-container3 {
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        padding: 15px;
+        height: 36px;
+        border-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 675px;
+    }
+    .subject-container1 {
+        width: 108.5%;
+        margin-left: 0px;
+        margin-top: 7.5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+    }
+    .subject-container2 {
+        width: 108.5%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-top: 7.5px;
+    }
+    .subject-container3 {
+        width: 108.5%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-top: 8px;
+    }
+    .level-title1, .level-title2, .level-title3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .subject-item {
+        font-size: 18px;
+        padding: 12px 15px;
+        width: 90%;
+    }
+
+    .subject-item:hover {
+        width: 100%;
+    }
+    .rights-footer {
+        position: 0px; /* Change from absolute to relative */
+        width: 100%;
+        text-align: center;
+        color: #1e1e2f;
+        font-size: 0.8em; /* Slightly smaller text on mobile */
+        padding: 20px 0;
+        margin-top: -200px; /* Add space from the content above */
+        background: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding-bottom: 40px;
+    }
+
+    .rights-footer a {
+        color: #1e1e2f;
+        text-decoration: none;
+    }
+
+    .rights-footer a:hover {
+        text-decoration: underline;
+    }
+}
+
