@@ -7,29 +7,11 @@ body {
     align-items: center;
     font-family: 'Cascadia Code', monospace;
     color: #ffffff;
-    background-image: url('garuda1.png'), url('garuda1.png'); 
-    background-size: 5000px auto; /* No stretching, use the natural width of 5000px */
-    background-position: 0 0, 5000px 0; /* Image 1 at (0,0), Image 2 at (5000px, 0) */
-    animation: scrollBackground 120s linear infinite; /* Scroll left to right in 20 seconds */
+    background-image: url('garuda12.png');
+    background-size: 100%;
+    background-position: fixed;
 }
 
-@keyframes scrollBackground {
-    0% {
-        background-position: 0 0, 5000px 0; /* Image 1 starts, Image 2 right after it */
-    }
-    100% {
-        background-position: -5000px 0, 0 0; /* Image 1 moves left off-screen, Image 2 takes its place */
-    }
-}
-
-@keyframes horizontalScroll {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%; /* Moves horizontally from left to right */
-    }
-}
 
 
 /* Top bar styling */
@@ -46,20 +28,20 @@ body {
 }
 
 /* Logo Styling */
-.logo {
-    height: 40px;
-    cursor: pointer;
+a.logo {
     text-decoration: none !important; 
 }
 
 .logo:before {
-    content: 'athman';
+    content: 'timerite';
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
     color: rgb(34, 10, 10);
-    display: block;
-    line-height: 40px;
+
+    text-decoration: none !important; /* This ensures the underline is gone */
+    border-bottom: none !important; /* Removes accidental border-bottom */
 }
+
 
 /* About Link Styling */
 .about {
@@ -159,18 +141,4 @@ body {
 
 
 
-}
-a.logo {
-    text-decoration: none !important; 
-}
-
-.logo:before {
-    content: 'athman';
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    color: rgb(34, 10, 10);
-    display: block;
-    line-height: 40px;
-    text-decoration: none !important; /* This ensures the underline is gone */
-    border-bottom: none !important; /* Removes accidental border-bottom */
 }
