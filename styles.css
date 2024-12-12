@@ -1,21 +1,17 @@
 /* Body styling */
 body {
-    min-height: 100vh;
     margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #3b3b58);
     font-family: 'Cascadia Code', monospace;
-    color: #ffffff;
-    background-image: url('garuda12.png');
+    color: #ffffff00;
+    background-image: url('garudaa.png');
     background-size: cover;
     background-attachment: fixed;
-    position: relative; /* Add this */
- /* Add space for footer, adjust value as needed */
 }
-
-
 
 /* Top bar styling */
 .top-bar {
@@ -31,339 +27,78 @@ body {
 }
 
 /* Logo Styling */
-a.logo {
-    text-decoration: none !important; 
+.logo {
+    height: 40px; /* Adjust logo size */
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: -4px
 }
 
 .logo:before {
-    content: 'timerite';
+    content: 'timerite'; /* Fallback text if image doesn't load */
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
-    color: rgb(34, 10, 10);
-
-    text-decoration: none !important; /* This ensures the underline is gone */
-    border-bottom: none !important; /* Removes accidental border-bottom */
+    color: rgb(0, 0, 0);
+    display: block;
+    line-height: 40px;
 }
-
 
 /* About Link Styling */
 .about {
     font-size: 1.2em;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    text-align: right;
-    margin-right: 40px;
+    text-align: right; /* Ensures text aligns properly */
+    margin-right: 40px; /* Adds spacing to ensure visibility */
+
 }
 
-/* Glass container for levels */
-.level-container1 {  
-    background: rgba(173, 173, 173, 0.271);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 21px 21px 0px 21px;
-    width: 100%;
-    max-width: 660px;
-    margin-bottom: 70px;
+/* Main container styling */
+.container {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5x);
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 700px;
+    width: 90%;
+    margin: 80px auto 30px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 400px;
-    height:68px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
 }
 
-/* Level title styling */
-.level-title1 {
+/* Heading styling */
+h1 {
     font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-.level-container2 {  
-    background: rgba(173, 173, 173, 0.271);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 21px 21px 0px 21px;
-    width: 100%;
-    max-width: 660px;
-    margin-bottom: 100px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-    margin-bottom: 400px;
-    height:68px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-/* Level title styling */
-.level-title2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-.level-container3 {  
-    background: rgba(173, 173, 173, 0.271);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 21px 21px 0px 21px;
-    width: 100%;
-    max-width: 660px;
-    margin-bottom: 300px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 350px;
-    margin-bottom: 100px;
-    height:68px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-/* Level title styling */
-.level-title3 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-/* Glass container for subjects */
-.subject-container1 {
-    background: rgba(187, 187, 187, 0.402);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 0px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 0px 0px;
-    width: 106.4%; 
-    box-shadow: 0 0px 0px rgba(157, 157, 157, 0.3);
-    color: #ffffff;
-    font-family: 'Cascadia Code', monospace;
-    font-size: 20px;
-    margin-bottom: 100px;
-
-}
-/* Glass container for subjects */
-.subject-container2 {
-    background: rgba(187, 187, 187, 0.402);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 0px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 0px 0px;
-    width: 106.4%; 
-    box-shadow: 0 0px 0px rgba(157, 157, 157, 0.3);
-    color: #ffffff;
-    font-family: 'Cascadia Code', monospace;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 200px;
-
-}
-/* Glass container for subjects */
-.subject-container3 {
-    background: rgba(187, 187, 187, 0.402);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 0px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 0px 0px;
-    width: 106.4%; 
-    box-shadow: 0 0px 0px rgba(157, 157, 157, 0.3);
-    color: #ffffff;
-    margin-bottom: 100px;
-    font-family: 'Cascadia Code', monospace;
-    font-size: 20px;
-
-}
-
-/* Subject list styling */
-.subject-list {
-    list-style-type: none;
-    padding: 0;
     margin: 0;
-    width: 100%;   
-}
-
-.subject-item {
-    display: block; /* Makes the subject take full width */
-    width: 100%; /* Full width relative to the subject container */
-    padding: 15px 0;
-    border-bottom: 0px solid rgba(255, 255, 255, 0.2);
-    
-    cursor: pointer;
-    transition: background 0s ease;
-    text-align: left;/* Left-align the subject names */
-    padding-left: 20px; /* Add gap from the left */ 
-    color: #1e1e2f;
-}
-
-.subject-item:last-child {
-    
-    border-bottom-left-radius: 20px; /* Curved bottom-left for last item */
-    border-bottom-right-radius: 20px; /* Remove border for last item */
-}
-.subject-item:first-child {
-    border-top-left-radius: 0px; /* Curved top-left for first item */
-    border-top-right-radius: 0px; /* Curved top-right for first item */
-}
-
-
-.subject-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    width: 97.1%;
-    
-
-
-
-}
-
-
-
-.rights-footer {
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 30px;
-    left: 0;
-    top: 2800px;
-    width: 100%;
+    padding: 15px;
     text-align: center;
-    color: #1e1e2f;
-    font-size: 0.9em;
-    /* Remove background and box-shadow */
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
+    background: rgba(255, 255, 255, 0.15);
+    color: #000000;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
-.rights-footer a {
-    color: #1e1e2f;
-    text-decoration: none;
+/* Countdown section styling */
+.countdown-section {
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.2em;
+    color: #000000;
+    text-align: left;
+    font-family: 'Cascadia Code', monospace;
 }
 
-.rights-footer a:hover {
-    text-decoration: underline;
+.countdown-section:last-child {
+    border-bottom: none;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .level-container1 {
-        width: 90%;
-        max-width: none;
-        margin: 20px auto;
-        padding: 15px;
-        height: 36px;
-        border-radius: 15px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        margin-top: 80px;
-    }
-    .level-container2 {
-        width: 90%;
-        max-width: none;
-        margin: 20px auto;
-        padding: 15px;
-        height: 36px;
-        border-radius: 15px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        margin-top: 490px;
-    }
-    .level-container3 {
-        width: 90%;
-        max-width: none;
-        margin: 20px auto;
-        padding: 15px;
-        height: 36px;
-        border-radius: 15px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        margin-top: 740px;
-    }
-    .subject-container1 {
-        width: 108.5%;
-        margin-left: 0px;
-        margin-top: 7.5px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-    }
-    .subject-container2 {
-        width: 108.5%;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        margin-top: 7.5px;
-    }
-    .subject-container3 {
-        width: 108.5%;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        margin-top: 8px;
-    }
-    .level-title1, .level-title2, .level-title3 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
-
-    .subject-item {
-        font-size: 18px;
-        padding: 12px 15px;
-        width: 90%;
-    }
-
-    .subject-item:hover {
-        width: 100%;
-    }
-    .rights-footer {
-        position: 0px; /* Change from absolute to relative */
-        width: 100%;
-        text-align: center;
-        color: #1e1e2f;
-        font-size: 0.8em; /* Slightly smaller text on mobile */
-        padding: 20px 0;
-        margin-top: -100px; /* Add space from the content above */
-        background: none;
-        box-shadow: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        padding-bottom: 0px;
-    }
-
-    .rights-footer a {
-        color: #1e1e2f;
-        text-decoration: none;
-    }
-
-    .rights-footer a:hover {
-        text-decoration: underline;
-    }
+.countdown-section:hover {
+    background: rgb(255, 255, 255);
 }
-
+.copyright {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 14px;
+}
