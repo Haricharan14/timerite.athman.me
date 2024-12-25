@@ -58,7 +58,7 @@ body {
 
 /* Main container styling */
 .container {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(230, 226, 187, 0.587);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5x);
     border-radius: 25px;
