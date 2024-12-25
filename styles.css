@@ -49,7 +49,7 @@ body {
 /* About Link Styling */
 .about {
     font-size: 1.2em;
-    color: rgb(255, 255, 255);
+    color: rgb(188, 188, 188);
     text-decoration: none;
     text-align: right; /* Ensures text aligns properly */
     margin-right: 40px; /* Adds spacing to ensure visibility */
@@ -58,7 +58,7 @@ body {
 
 /* Main container styling */
 .container {
-    background: rgba(230, 226, 187, 0.587);
+    background: rgba(224, 221, 194, 0.237);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5x);
     border-radius: 25px;
