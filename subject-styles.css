@@ -1,5 +1,219 @@
-/* Import base styles */
-@import 'styles.css';
+/* Body styling */
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #d7d7d7, #b1b1b1);
+    font-family: 'Cascadia Code', monospace;
+    color: #ffffff00;
+    background-color: #1e1e2f;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+
+
+/* Top bar styling */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    height: 40px; /* Adjust logo size */
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: -4px
+}
+
+.logo:before {
+    content: 'timerite'; /* Fallback text if image doesn't load */
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    display: block;
+    line-height: 40px;
+}
+
+/* About Link Styling */
+.about {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: right; /* Ensures text aligns properly */
+    margin-right: 40px; /* Adds spacing to ensure visibility */
+
+}
+
+/* Main container styling */
+.container {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5x);
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 700px;
+    width: 90%;
+    margin: 80px auto 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    color: #000000;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Countdown section styling */
+.countdown-section {
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.2em;
+    color: #000000;
+    text-align: left;
+    font-family: 'Cascadia Code', monospace;
+}
+
+.countdown-section:last-child {
+    border-bottom: none;
+}
+
+.countdown-section:hover {
+    background: rgba(255, 255, 255, 0.252);
+}
+.copyright {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 14px;
+}
+/* Deadline info styling */
+.deadline-info {
+    color: #000000;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Timer styling */
+.timer {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000000;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 171, 11, 0.2);
+    border-radius: 5px;
+}
+
+.timer.passed {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Week section styling */
+.countdown-section h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.info-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.info-box ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #000000;
+}
+
+.info-box p {
+    margin: 10px 0;
+    color: #000000;
+}
+
+.info-box strong {
+    color: #000000;
+}
+.formula {
+    padding: 15px 0;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.info-box small {
+    color: #000000;
+    font-style: italic;
+}
+
+.aurora {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.aurora-layer {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient(circle, rgba(58, 123, 213, 0.3), transparent 60%);
+  filter: blur(150px);
+  animation: move 10s infinite;
+  transform-origin: center;
+}
+
+.layer1 {
+  background: radial-gradient(circle, rgba(58, 123, 213, 0.4), transparent 60%);
+}
+
+.layer2 {
+  background: radial-gradient(circle, rgba(123, 104, 238, 0.4), transparent 60%);
+  animation-delay: 3s;
+}
+
+.layer3 {
+  background: radial-gradient(circle, rgba(72, 219, 251, 0.4), transparent 60%);
+  animation-delay: 6s;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20%, -20%) scale(1.1);
+  }
+  100% {
+    transform: translate(-20%, 20%) scale(1);
+  }
+}
+
 
 /* Override container width for subject pages */
 .container {
@@ -13,6 +227,7 @@
     overflow-x: auto;
     margin: 15px -20px; /* Negative margin to allow full width */
 }
+
 
 /* Ensure formulas are readable on mobile */
 @media (max-width: 768px) {
@@ -33,7 +248,7 @@
     padding: 15px;
     border-left: 4px solid #ff9800;
     margin: 15px 0;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
 }
 
 .info-box ol {
@@ -118,4 +333,113 @@
     .timer {
         font-size: 0.8em;
     }
+}
+.activity-deadlines h3 {
+    color: #333;
+    margin: 20px 0 10px 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.activity-deadlines h3:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.activity-deadlines .deadline-info {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+/* Modern Table Styling */
+/* Modern Table Styling */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.grade-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.grade-table th {
+    background: #f5f5f5;  /* Neutral color for header */
+    color: #333333;      /* Darker text for better contrast */
+    font-weight: 600;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+}
+
+.grade-table td {
+    padding: 15px;
+    border: 1px solid #84848443;
+    color: #2c3e50;
+}
+
+.grade-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.grade-table tr:nth-child(odd) {
+    background-color: rgba(245, 247, 250, 0.7);
+}
+
+.grade-table tr:hover {
+    background-color: rgba(245, 247, 250, 0.9);
+}
+
+.grade-table td:nth-child(3) { /* T column */
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+.grade-table td:nth-child(4) { /* Grade column */
+    font-weight: 600;
+    color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grade-table {
+        font-size: 0.85em;
+    }
+    
+    .grade-table th,
+    .grade-table td {
+        padding: 10px;
+    }
+    
+    .grade-table th {
+        font-size: 0.8em;
+    }
+}
+
+/* Add smooth scrolling for mobile */
+.table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ddd transparent;
+}
+
+/* Custom scrollbar styling */
+.table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 3px;
 }
