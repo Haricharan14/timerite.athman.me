@@ -208,7 +208,7 @@ h1 {
         background: rgba(224, 221, 194, 0.168);
         margin: 60px auto 80px;
         transform: scale(0.85);
-        width: 90%;
+        width: 85%;
         max-width: 600px;
     }
 
@@ -230,27 +230,3 @@ h1 {
         white-space: nowrap;
     }
 }
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-    .container {
-        margin: 50px auto 100px;
-        transform: scale(0.82);
-        width: 80%;
-        max-width: 400px;
-    }
-
-    .countdown-section {
-        font-size: 1.1em;
-        padding: 12px;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-    .container {
-        width: 75%;
-        transform: scale(0.8);
-    }
-}
-
