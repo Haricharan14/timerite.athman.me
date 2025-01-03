@@ -7,7 +7,7 @@ body {
     align-items: center;
     font-family: 'Cascadia Code', monospace;
     color: #ffffff00;
-    background-color: #d9d9d9;
+    background-color: #c6d0da;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -58,36 +58,37 @@ body {
 
 /* Main container styling */
 .container {
-    background: rgba(224, 221, 194, 0.237);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5x);
+    background: rgba(255, 255, 255, 0.237);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 25px;
     overflow: hidden;
-    max-width: 700px;
+    max-width: 750px;
     width: 90%;
-    margin: 80px auto 30px;
+    margin: 80px auto 60px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
+    transform: scale(1);
 }
 
 /* Heading styling */
 h1 {
     font-size: 2.5em;
     margin: 0;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.326);
     color: #000000;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(237, 237, 237);
 }
 
 /* Countdown section styling */
 .countdown-section {
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.1);
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #000000;
     text-align: left;
     font-family: 'Cascadia Code', monospace;
@@ -168,50 +169,7 @@ h1 {
     font-style: italic;
 }
 
-.aurora {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
-.aurora-layer {
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
-  background: radial-gradient(circle, rgba(58, 123, 213, 0.3), transparent 60%);
-  filter: blur(150px);
-  animation: move 10s infinite;
-  transform-origin: center;
-}
-
-.layer1 {
-  background: radial-gradient(circle, rgba(58, 123, 213, 0.4), transparent 60%);
-}
-
-.layer2 {
-  background: radial-gradient(circle, rgba(123, 104, 238, 0.4), transparent 60%);
-  animation-delay: 3s;
-}
-
-.layer3 {
-  background: radial-gradient(circle, rgba(72, 219, 251, 0.4), transparent 60%);
-  animation-delay: 6s;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(20%, -20%) scale(1.1);
-  }
-  100% {
-    transform: translate(-20%, 20%) scale(1);
-  }
-}
 .deadline-passed {
     background-color: rgba(255, 0, 0, 0.2); /* Light red background */
     color: red; /* Text color */
@@ -220,3 +178,79 @@ h1 {
     margin-top: 5px; /* Space above the deadline text */
     text-align: center; /* Center the text */
 }
+.floating-countdown {
+    position: fixed; /* Keep it fixed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    font-size: 35em; /* Large font size */
+    color: rgba(255, 255, 255, 0.361); /* Semi-transparent blue color */
+    text-align: center;
+    z-index: 1; /* Ensure it is above other content */
+    pointer-events: none; /* Allow clicks to pass through */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-weight: bold; /* Bold text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+
+.floating-countdown span {
+    display: inline; /* Keep spans inline */
+    margin: 0 5px; /* Add some space between elements */
+}
+.container {
+    position: relative; /* Ensure the container is positioned relative */
+    z-index: 2; /* Ensure it is above the countdown */
+}
+/* Mobile view adjustments for the floating countdown */
+@media (max-width: 768px) {
+    .container {
+        background: rgba(224, 221, 194, 0.168);
+        margin: 60px auto 80px;
+        transform: scale(0.85);
+        width: 90%;
+        max-width: 600px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .countdown-section {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .floating-countdown {
+        font-size: 20em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        color: rgba(255, 255, 255, 0.505);
+        white-space: nowrap;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .container {
+        margin: 50px auto 100px;
+        transform: scale(0.82);
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .countdown-section {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .container {
+        width: 75%;
+        transform: scale(0.8);
+    }
+}
+
