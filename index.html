@@ -5,79 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IITM BS deadline timer</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <style>
+        .floating-countdown {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35em;
+            color: rgba(255, 255, 255, 0.425);
+            text-align: center;
+            z-index: 0;
+            pointer-events: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;  /* Maximum boldness */
+            white-space: nowrap;
+            letter-spacing: 0em;  /* Reset to normal spacing */
+        }
+
+        .floating-countdown span {
+            display: inline;
+            margin: 0 2px;
+            letter-spacing: -0.02em;  /* Slightly reduced spacing for numbers */
+        }
+
+        @media (max-width: 768px) {
+            .floating-countdown {
+                font-size: 6em;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -70%);
+                color: rgba(255, 255, 255, 0.9);
+                white-space: nowrap;
+                letter-spacing: 0em;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Top bar -->
     <header class="top-bar">
         <img src="athman-logo.png" alt="timerite" class="logo">
-        <span class="about">About</span>
+        <a href="about.html" class="about">About</a>
     </header>
 
-    <div class="aurora">
-        <div class="aurora-layer layer1"></div>
-        <div class="aurora-layer layer2"></div>
-        <div class="aurora-layer layer3"></div>
-      </div>
-      
-      
-      
 
-    
-
-  
     <!-- Main Content -->
-    <div class="container">
+    <div class="container" style="scale: 1.2; margin-bottom: 150px; margin-top: 180px;">
         <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Foundation</h1>
-        <div class="countdown-section" onclick="window.location.href='mathematics1.html'">Mathematics for Data Science 1</div>
-        <div class="countdown-section" onclick="window.location.href='english1.html'">English 1</div>
         <div class="countdown-section" onclick="window.location.href='ct.html'">Computational Thinking</div>
-        <div class="countdown-section" onclick="window.location.href='statistics1.html'">Statistics for Data Science 1</div>
-        <div class="countdown-section" onclick="window.location.href='python.html'">Introduction to Python Programming</div>
+        <div class="countdown-section" onclick="window.location.href='english1.html'">English 1</div>
         <div class="countdown-section" onclick="window.location.href='english2.html'">English 2</div>
+        <div class="countdown-section" onclick="window.location.href='mathematics1.html'">Mathematics for Data Science 1</div>
         <div class="countdown-section" onclick="window.location.href='mathematics2.html'">Mathematics for Data Science 2</div>
+        <div class="countdown-section" onclick="window.location.href='python.html'">Introduction to Python Programming</div>
+        <div class="countdown-section" onclick="window.location.href='statistics1.html'">Statistics for Data Science 1</div>
         <div class="countdown-section" onclick="window.location.href='statistics2.html'">Statistics for Data Science 2</div>
     </div>
 
-    <div class="container">
+    <div class="container" style="scale: 1.2; margin-bottom: 230px;">
         <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Diploma</h1>
-        <div class="countdown-section" onclick="window.location.href='mlf.html'">Machine Learning Foundations</div>
-        <div class="countdown-section" onclick="window.location.href='mlt.html'">Machine Learning Techniques</div>
-        <div class="countdown-section" onclick="window.location.href='mlp.html'">Machine Learning Practice</div>
-        <div class="countdown-section" onclick="window.location.href='bdm.html'">Business Data Management</div>
-        <div class="countdown-section" onclick="window.location.href='ba.html'">Business Analytics</div>
-        <div class="countdown-section" onclick="window.location.href='toolsinds.html'">Tools in Data Science</div>
-        <div class="countdown-section" onclick="window.location.href='pdsa.html'">Programming Data Structures and Algorithms using Python</div>
-        <div class="countdown-section" onclick="window.location.href='dbms.html'">Database Management System (DBMS)</div>
         <div class="countdown-section" onclick="window.location.href='appdev1.html'">Application Development - 1</div>
-        <div class="countdown-section" onclick="window.location.href='java.html'">Programming Concepts using Java</div>
-        <div class="countdown-section" onclick="window.location.href='systemcommands.html'">System Commands</div>
         <div class="countdown-section" onclick="window.location.href='appdev2.html'">Application Development - 2</div>
+        <div class="countdown-section" onclick="window.location.href='ba.html'">Business Analytics</div>
+        <div class="countdown-section" onclick="window.location.href='bdm.html'">Business Data Management</div>
+        <div class="countdown-section" onclick="window.location.href='dbms.html'">Database Management System (DBMS)</div>
+        <div class="countdown-section" onclick="window.location.href='java.html'">Programming Concepts using Java</div>
+        <div class="countdown-section" onclick="window.location.href='mlf.html'">Machine Learning Foundations</div>
+        <div class="countdown-section" onclick="window.location.href='mlp.html'">Machine Learning Practice</div>
+        <div class="countdown-section" onclick="window.location.href='mlt.html'">Machine Learning Techniques</div>
+        <div class="countdown-section" onclick="window.location.href='pdsa.html'">Programming Data Structures and Algorithms using Python</div>
+        <div class="countdown-section" onclick="window.location.href='systemcommands.html'">System Commands</div>
+        <div class="countdown-section" onclick="window.location.href='toolsinds.html'">Tools in Data Science</div>
     </div>
     
-    <div class="container">
+    <div class="container" style="scale: 1.2; margin-bottom: 100px;">
         <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Degree</h1>
-        <div class="countdown-section" onclick="window.location.href='software-testing.html'">Software Testing</div>
-        <div class="countdown-section" onclick="window.location.href='software-engineering.html'">Software Engineering</div>
-        <div class="countdown-section" onclick="window.location.href='deep-learning.html'">Deep Learning</div>
-        <div class="countdown-section" onclick="window.location.href='ai-search-methods-for-problem-solving.html'">AI: Search Methods for Problem Solving</div>
-        <div class="countdown-section" onclick="window.location.href='strategies-for-professional-growth.html'">Strategies for Professional Growth</div>
-        <div class="countdown-section" onclick="window.location.href='introduction-to-big-data.html'">Introduction to Big Data</div>
-        <div class="countdown-section" onclick="window.location.href='programming-in-c.html'">Programming in C</div>
-        <div class="countdown-section" onclick="window.location.href='advanced-algorithms.html'">Advanced Algorithms</div>
-        <div class="countdown-section" onclick="window.location.href='game-theory-and-strategy.html'">Game Theory and Strategy</div>
-        <div class="countdown-section" onclick="window.location.href='speech-technology.html'">Speech Technology</div>
-        <div class="countdown-section" onclick="window.location.href='design-thinking-for-data-driven-app-development.html'">Design Thinking for Data-Driven App Development</div>
-        <div class="countdown-section" onclick="window.location.href='market-research.html'">Market Research</div>
-        <div class="countdown-section" onclick="window.location.href='privacy-security-in-online-social-media.html'">Privacy & Security in Online Social Media</div>
-        <div class="countdown-section" onclick="window.location.href='statistical-computing.html'">Statistical Computing</div>
-        <div class="countdown-section" onclick="window.location.href='computer-systems-design.html'">Computer Systems Design</div>
-        <div class="countdown-section" onclick="window.location.href='financial-forensics.html'">Financial Forensics</div>
-        <div class="countdown-section" onclick="window.location.href='introduction-to-natural-language-processing.html'">Introduction to Natural Language Processing (i-NLP)</div>
-        <div class="countdown-section" onclick="window.location.href='corporate-finance.html'">Corporate Finance</div>
-        <div class="countdown-section" onclick="window.location.href='deep-learning-for-cv.html'">Deep Learning for CV</div>
-        <div class="countdown-section" onclick="window.location.href='large-language-models.html'">Large Language Models</div>
-        <div class="countdown-section" onclick="window.location.href='deep-learning-practice.html'">Deep Learning Practice</div>
+        <div class="countdown-section" onclick="window.location.href='AI Search Methods for Problem Solving.html'">AI: Search Methods for Problem Solving</div>
+        <div class="countdown-section" onclick="window.location.href='Algorithmic Thinking in Bioinformatics.html'">Algorithmic Thinking in Bioinformatics</div>
+        <div class="countdown-section" onclick="window.location.href='Big Data & Biological Networks.html'">Big Data & Biological Networks</div>
+        <div class="countdown-section" onclick="window.location.href='Corporate Finance.html'">Corporate Finance</div>
+        <div class="countdown-section" onclick="window.location.href='Data Visualization.html'">Data Visualization</div>
+        <div class="countdown-section" onclick="window.location.href='Deep Learning.html'">Deep Learning</div>
+        <div class="countdown-section" onclick="window.location.href='Deep Learning for CV.html'">Deep Learning for CV</div>
+        <div class="countdown-section" onclick="window.location.href='Deep Learning Practice.html'">Deep Learning Practice</div>
+        <div class="countdown-section" onclick="window.location.href='Financial Forensics.html'">Financial Forensics</div>
+        <div class="countdown-section" onclick="window.location.href='Industry 4.0.html'">Industry 4.0</div>
+        <div class="countdown-section" onclick="window.location.href='Introduction to Big Data.html'">Introduction to Big Data</div>
+        <div class="countdown-section" onclick="window.location.href='Introduction to Natural Language Processing.html'">Introduction to Natural Language Processing (i-NLP)</div>
+        <div class="countdown-section" onclick="window.location.href='Linear Statistical Models.html'">Linear Statistical Models</div>
+        <div class="countdown-section" onclick="window.location.href='Managerial Economics.html'">Managerial Economics</div>
+        <div class="countdown-section" onclick="window.location.href='Mathematical Thinking.html'">Mathematical Thinking</div>
+        <div class="countdown-section" onclick="window.location.href='Operating Systems.html'">Operating Systems</div>
+        <div class="countdown-section" onclick="window.location.href='Programming in C.html'">Programming in C</div>
+        <div class="countdown-section" onclick="window.location.href='Software Engineering.html'">Software Engineering</div>
+        <div class="countdown-section" onclick="window.location.href='Software Testing.html'">Software Testing</div>
+        <div class="countdown-section" onclick="window.location.href='Special Topics in ML.html'">Special topics in ML (Reinforcement Learning)</div>
+        <div class="countdown-section" onclick="window.location.href='Strategies for Professional Growth.html'">Strategies for Professional Growth</div>
     </div>
     
 
@@ -86,6 +113,74 @@
     <footer class="copyright">
         <p>&copy; 2024 Timerite. All rights reserved.</p>
     </footer>
+
+    <!-- Floating Countdown -->
+    <div class="floating-countdown" id="floatingCountdown">
+        <span id="days-quiz1">0</span>d <span id="hours-quiz1">0</span>h
+    </div>
+    
+
+    <script>
+        function updateCountdown() {
+            const quiz1Date = new Date("February 23, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+
+            // Calculate time remaining for Quiz 1
+            updateTimer(quiz1Date, "quiz1");
+        }
+
+        function updateTimer(targetDate, quiz) {
+            const distance = targetDate - new Date().getTime();
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Update the countdown display
+            document.getElementById(`days-${quiz}`).textContent = days;
+            document.getElementById(`hours-${quiz}`).textContent = hours;
+            document.getElementById(`minutes-${quiz}`).textContent = minutes;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById(`countdown-${quiz}`).textContent = "TIME'S UP!";
+            }
+        }
+
+        // Update the countdown every minute
+        const countdownInterval = setInterval(updateCountdown, 60000);
+        updateCountdown(); // Initial call
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        console.log("jQuery is working!");
+        animateDiv();
+    });
+
+    function makeNewPosition(){
+        // Get viewport dimensions (remove the dimension of the div)
+        var h = $(window).height() - 50;
+        var w = $(window).width() - 50;
+        
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+        
+        return [nh,nw];    
+    }
+
+    function animateDiv(){
+        var newq = makeNewPosition();
+        console.log("New Position:", newq); // Debugging line
+        var oldq = $('.floating-countdown').offset();
+        var speed = calcSpeed([oldq.top, oldq.left], newq);
+        
+        $('.floating-countdown').animate({ top: newq[0], left: newq[1] }, speed, function(){
+          animateDiv();        
+        });
+    }
+    </script>
 </body>
 
 </html>
