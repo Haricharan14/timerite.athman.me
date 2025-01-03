@@ -1158,10 +1158,14 @@ h1 {
     .formula-section {
         font-size: 17px; /* Reduce font size for smaller screens */
         padding-left: 14px; /* Reduce padding for smaller screens */
+        width: 90%;
     }
     .faq-container {
         font-size: 17px; /* Reduce font size for smaller screens */
         width: 100%;
         padding: 0px;
     }
+
+
+
 }
