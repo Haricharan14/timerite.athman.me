@@ -1165,6 +1165,9 @@ h1 {
         width: 100%;
         padding: 0px;
     }
+    .latex-formula {
+        width: 90%;
+    }
 
 
 
