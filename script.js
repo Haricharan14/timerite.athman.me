@@ -9,3 +9,6 @@ items.forEach(item => {
     console.log(item.textContent);
   });
 });
+
+
+
