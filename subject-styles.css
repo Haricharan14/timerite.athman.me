@@ -1131,3 +1131,37 @@ h1 {
 .faq-item:focus::after {
     animation: ripple 1s ease-out;
 }
+@media (max-width: 768px) {
+    /* Other mobile styles */
+
+    .formula {
+        margin: 15px -10px; /* Reduce margin for smaller screens */
+    }
+
+    .formula-section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .latex-formula {
+        font-size: 0.9em; /* Slightly reduce font size */
+        overflow-x: auto; /* Allow horizontal scrolling for formulas */
+        width: 100%; /* Ensure formula takes full container width */
+    }
+    .body {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+    .container {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        width: 100%;
+        backdrop-filter: blur(7px);
+    }
+    .formula-section {
+        font-size: 17px; /* Reduce font size for smaller screens */
+        padding-left: 14px; /* Reduce padding for smaller screens */
+    }
+    .faq-container {
+        font-size: 17px; /* Reduce font size for smaller screens */
+        width: 100%;
+        padding: 0px;
+    }
+}
