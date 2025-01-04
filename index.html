@@ -51,6 +51,24 @@
         <img src="athman-logo.png" alt="timerite" class="logo">
         <a href="about.html" class="about">About</a>
     </header>
+    <div class="container" style="scale: 1.2; margin-top: 150px; margin-bottom: 50px;     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4); ;">
+    <h1>Introduction</h1>
+    <div class="intro-section" style="color:black">
+        <p style="font-size: 1em; padding: 20px;">Welcome to the IITM BS Deadline Tracker! This resource is specifically designed for BS Data Science. It's based on the official grading documents released by IIT Madras every New Term. Please note that I do not own the data displayed here; all rights belong to IIT Madras.</p>
+        <p style="font-size: 1em; padding: 20px;">You can click on a subject to see its deadlines. Each subject page includes:</p>
+        <ul style="font-size: 1em;">
+            <li>Important Dates (like quiz and exam dates)</li>
+            <li>Weekly Assignment Deadlines</li>
+            <li>Score Calculation formulas and explanations</li>
+            <li>Grade Calculator (to estimate your grade)</li>
+            <li>OPPE Information (for programming exams)</li>
+            <li>Course Eligibility Criteria</li>
+            <li>Bonus Information (if applicable)</li>
+            <li>Frequently Asked Questions (FAQs)</li>
+        </ul>
+        <p style="font-size: 1em; padding: 20px;">This tracker is a work in progress, and I'm always striving to keep it updated. If you notice any mistakes or outdated information, please feel free to contact me via the "About" page so I can make the necessary corrections.</p> 
+    </div>
+    </div>
 
 
     <!-- Main Content -->
@@ -122,7 +140,7 @@
 
     <script>
         function updateCountdown() {
-            const quiz1Date = new Date("February 23, 2025 09:00:00").getTime();
+            const quiz1Date = new Date("February 23, 2025 9:00:00").getTime();
             const now = new Date().getTime();
 
             // Calculate time remaining for Quiz 1
