@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma Dates</title>
+    <link rel="stylesheet" href="subject-styles.css">
+</head>
+<body>
+    <!-- Weekly Assignment Deadlines -->
+    <div class="countdown-section">
+        <h2>Weekly Assignment Deadlines</h2>
+        <div class="deadline-info">Week 1: October 6, 2024 (Sunday)</div>
+        <div id="week1-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 2: October 7, 2024 (Monday)</div>
+        <div id="week2-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 3: October 13, 2024 (Sunday)</div>
+        <div id="week3-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 4: October 20, 2024 (Sunday)</div>
+        <div id="week4-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 5: November 3, 2024 (Sunday)</div>
+        <div id="week5-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 6: November 10, 2024 (Sunday)</div>
+        <div id="week6-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 7: November 11, 2024 (Monday)</div>
+        <div id="week7-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 8: November 17, 2024 (Sunday)</div>
+        <div id="week8-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 9: November 24, 2024 (Sunday)</div>
+        <div id="week9-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 10: December 6, 2024 (Friday)</div>
+        <div id="week10-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 11: December 11, 2024 (Wednesday)</div>
+        <div id="week11-timer" class="timer"></div>
+        
+        <div class="deadline-info">Week 12: December 18, 2024 (Wednesday)</div>
+        <div id="week12-timer" class="timer"></div>
+    </div>
+
+    <script>
+        const deadlines = {
+            'week1': '2024-10-06T23:59:59',
+            'week2': '2024-10-07T23:59:59',
+            'week3': '2024-10-13T23:59:59',
+            'week4': '2024-10-20T23:59:59',
+            'week5': '2024-11-03T23:59:59',
+            'week6': '2024-11-10T23:59:59',
+            'week7': '2024-11-11T23:59:59',
+            'week8': '2024-11-17T23:59:59',
+            'week9': '2024-11-24T23:59:59',
+            'week10': '2024-12-06T23:59:59',
+            'week11': '2024-12-11T23:59:59',
+            'week12': '2024-12-18T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+    </script>
+</body>
+</html> 

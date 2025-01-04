@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Data Visualization</h1>
+        
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <p>Quiz 1: February 23, 2025</p> 
+            <p>Quiz 2: March 16th, 2025</p>
+            <p>Above to be attended in person at designated centres.</p>
+            <p>End term exam: Not in centre, project based with presentation and viva</p>
+
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li>Eligibility to attend final exam: Average of the best 3 out of the 5 graded assignment scores >= 40/100, and attending at least one of the 2 quizzes in the centre.</li>
+                <li>Eligibility to get the final course grade: Completing & presenting the Group Project (P) with scoring more than 50/100 in it.</li>
+            </ul>
+
+            <h3>Score Calculation</h3>
+            <div class="formula-section">
+                <div class="latex-formula">
+                    \[
+                    T = 0.3 \times \text{GA} + \max(0.2 \times \text{Qz1} + 0.2 \times \text{Qz2}, 0.3 \times \max(\text{Qz1}, \text{Qz2})) + 0.3 \times \text{P} + \text{Bonus}
+                    \]
+                </div>
+                <div class="formula-explanation">
+                    Where:
+                    <ul>
+                        <li><strong>GA:</strong> Sum of best 3 out of 5 Graded assignments</li>
+                        <li><strong>Qz1:</strong> Score in Quiz I (0, if not attempted)</li>
+                        <li><strong>Qz2:</strong> Score in Quiz II (0, if not attempted)</li>
+                        <li><strong>P:</strong> Group project and presentation</li>
+                        <li><strong>Bonus:</strong> Maximum of 10 marks; 5 marks for each of the 2 Extra assignments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <div class="input-group">
+                        <label for="ga">GA (Sum of Best 3 Graded Assignments):</label> 
+                        <input type="number" id="ga" min="0" max="300" step="0.01"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz1">Quiz 1 Score:</label>
+                        <input type="number" id="quiz1" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz2">Quiz 2 Score:</label>
+                        <input type="number" id="quiz2" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="project">Group Project Score:</label> 
+                        <input type="number" id="project" min="0" max="100" step="0.01"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="bonus">Bonus (Max 10):</label> 
+                        <input type="number" id="bonus" min="0" max="10" step="0.01"> 
+                    </div>
+                    <button onclick="calculateDataVisualizationGrade()">Calculate Grade</button>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p style="color: #666; text-align: center;">Result will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function calculateDataVisualizationGrade() {
+                const ga = parseFloat(document.getElementById('ga').value) || 0;
+                const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+                const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+                const project = parseFloat(document.getElementById('project').value) || 0;
+                const bonus = parseFloat(document.getElementById('bonus').value) || 0;
+
+                const gaComponent = 0.3 * ga;
+                const quizComponent = Math.max((0.2 * quiz1 + 0.2 * quiz2), (0.3 * Math.max(quiz1, quiz2)));
+                const projectComponent = 0.3 * project; 
+
+                let finalScore = gaComponent + quizComponent + projectComponent + bonus;
+                finalScore = Math.min(finalScore, 100);
+
+                const resultBox = document.getElementById('gradeResult');
+                resultBox.innerHTML = `
+                    <ul>
+                        <li>GA Component (30%): ${gaComponent.toFixed(2)}%</li> 
+                        <li>Quiz Component (20%): ${quizComponent.toFixed(2)}%</li> 
+                        <li>Project Component (30%): ${projectComponent.toFixed(2)}%</li> 
+                        <li>Bonus: ${bonus.toFixed(2)}%</li> 
+                        <li><strong>Final Score: ${finalScore.toFixed(2)}%</strong></li>
+                    </ul>
+                `;
+            }
+        </script>
+
+    </div>
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

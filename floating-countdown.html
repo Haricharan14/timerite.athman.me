@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Countdown</title>
+    <!-- Add Google Fonts - Outfit with extra bold weight -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ced6df;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .floating-countdown {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 38em;
+            color: rgba(255, 255, 255, 0.425);
+            text-align: center;
+            z-index: 0;
+            pointer-events: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;  /* Maximum boldness */
+            white-space: nowrap;
+            letter-spacing: 0em;  /* Reset to normal spacing */
+        }
+
+        .floating-countdown span {
+            display: inline;
+            margin: 0 2px;
+            letter-spacing: -0.03em;  /* Slightly reduced spacing for numbers */
+        }
+
+        @media (max-width: 768px) {
+            .floating-countdown {
+                font-size: 4em;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -70%);
+                color: rgba(255, 255, 255, 0.9);
+                white-space: nowrap;
+                letter-spacing: 0em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Countdown -->
+    <div class="floating-countdown" id="floatingCountdown">
+        <span id="days-quiz1">0</span>d <span id="hours-quiz1">0</span>h
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const quiz1Date = new Date("February 23, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            updateTimer(quiz1Date, "quiz1");
+        }
+
+        function updateTimer(targetDate, quiz) {
+            const distance = targetDate - new Date().getTime();
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            document.getElementById(`days-${quiz}`).textContent = days;
+            document.getElementById(`hours-${quiz}`).textContent = hours;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('floatingCountdown').textContent = "TIME'S UP!";
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

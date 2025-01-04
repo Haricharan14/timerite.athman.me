@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management System - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Database Management System</h1>
+        
+        <!-- Important Dates -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: March 16, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">OPPE1: March 30, 2025 (Sunday, 7:30 AM)</div>
+            <div id="oppe1-timer" class="timer"></div>
+            
+            <div class="deadline-info">OPPE1 Reattempt: April 6, 2025 (Sunday, 7:30 AM)</div>
+            <div id="oppe1-reattempt-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres except OPPE.</p>
+        </div>
+
+        <!-- Weekly Assignments -->
+        <div class="countdown-section">
+            <h2>Weekly Assignment Deadlines</h2>
+            
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <!-- Assessment Structure -->
+        <div class="countdown-section">
+            <h2>Assessment Structure</h2>
+            <div class="table-wrapper">
+                <table class="assessment-table">
+                    <thead>
+                        <tr>
+                            <th>Assessment Type</th>
+                            <th>Method</th>
+                            <th>Proctoring</th>
+                            <th>Score Component</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Week 1-12</td>
+                            <td>100% objective</td>
+                            <td>NA</td>
+                            <td>GA</td>
+                        </tr>
+                        <tr>
+                            <td>Weekly assessments<br>Weeks 2,3</td>
+                            <td>PostgreSQL assignments</td>
+                            <td>None</td>
+                            <td>GAA2</td>
+                        </tr>
+                        <tr>
+                            <td>Week 7</td>
+                            <td>Programming assignment</td>
+                            <td>NA</td>
+                            <td>GAA3</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz 1<br>February 23, 2025<br>(Weeks 1-4)</td>
+                            <td>Objective</td>
+                            <td>In-person at TCS centres</td>
+                            <td>Qz1</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz 2<br>March 16, 2025<br>(Weeks 1-8)</td>
+                            <td>Objective</td>
+                            <td>In-person at TCS centres</td>
+                            <td>Qz2</td>
+                        </tr>
+                        <tr>
+                            <td>Online Programming Exam (OPE1)<br>March 30, 2025<br>Reattempt: April 6, 2025</td>
+                            <td>SQL queries and Python-DB connectivity<br><em>Students can choose date/slot based on logistics</em></td>
+                            <td>Online remote proctored</td>
+                            <td>OPE1</td>
+                        </tr>
+                        <tr>
+                            <td>End Semester<br>April 13, 2025</td>
+                            <td>100% Objective</td>
+                            <td>In-person at TCS centres</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Score Calculation -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GAA1} = \text{Average score in First 10 weekly graded assignments} \]
+                            \[ \text{GAA2} = \text{Average score of week 2 and 3 SQL based assignments} \]
+                            \[ \text{GAA3} = \text{Average score of week 7 programming assignment} \]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section">
+                    <h3>Score Distribution</h3>
+                    <div class="score-distribution">
+                        <div class="score-card">
+                            <div class="score-header">
+                                <i class="fas fa-tasks"></i>
+                                <span>Weekly Assignments</span>
+                            </div>
+                            <div class="score-value">10</div>
+                            <div class="score-detail">Best 10 out of 11 weeks</div>
+                            <div class="score-note">GAA calculation</div>
+                        </div>
+                        
+                        <div class="score-card">
+                            <div class="score-header">
+                                <i class="fas fa-pen-square"></i>
+                                <span>Quiz & Final</span>
+                            </div>
+                            <div class="score-value">80-90</div>
+                            <div class="score-detail">Depends on option selected</div>
+                            <div class="score-note">
+                                Option 1: max 80% (60% F + 20% best quiz)<br>
+                                Option 2: max 90% (40% F + 50% both quizzes)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div class="latex-formula">
+                            \begin{aligned}
+                            T = & \underbrace{0.04 \times \text{GAA1}}_{\text{Graded Assignments}} + \underbrace{0.03 \times \text{GAA2}}_{\text{SQL Assignments}} + \underbrace{0.03 \times \text{GAA3}}_{\text{Programming Assignments}} + \underbrace{0.2 \times \text{OPE}}_{\text{Online Programming Exam}} \\ +
+                                & \max \Bigg( \underbrace{0.45 \times \text{F} + 0.15 \times \max(\text{Qz1}, \text{Qz2})}_{\text{option 1}},
+                                \qquad \underbrace{0.4 \times \text{F} + 0.1 \times \text{Qz1} + 0.2 \times \text{Qz2}}_{\text{option 2}} \Bigg)
+                            \end{aligned}                        </div>
+                        <div class="formula-notes">
+                            <div class="note-item">
+                                <i class="fas fa-arrow-right"></i> Option 1: 45% Final + 15% Best Quiz
+                            </div>
+                            <div class="note-item">
+                                <i class="fas fa-arrow-right"></i> Option 2: 40% Final + 10% Quiz1 + 20% Quiz2
+                            </div>
+                        </div>
+                        <div class="total-score">
+                            <div class="total-header">
+                                <i class="fas fa-calculator"></i>
+                                <span>Total Marks: 100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grade Calculator -->
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="gaa">GAA (Assignments Average): </label>
+                            <input type="number" id="gaa" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="gaa2">GAA2: </label>
+                            <input type="number" id="gaa2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="gaa3">GAA3: </label>
+                            <input type="number" id="gaa3" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz1">Quiz 1 Score: </label>
+                            <input type="number" id="quiz1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz2">Quiz 2 Score: </label>
+                            <input type="number" id="quiz2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="final">Final Exam Score: </label>
+                            <input type="number" id="final" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="ope">OPE Score: </label>
+                            <input type="number" id="ope" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Python-DB connectivity question passed:</label>
+                            <div>
+                                <input type="radio" id="pythonDBPassYes" name="pythonDBPass" value="yes">
+                                <label for="pythonDBPassYes">Yes</label>
+                                <input type="radio" id="pythonDBPassNo" name="pythonDBPass" value="no" checked>
+                                <label for="pythonDBPassNo">No</label>
+                            </div>
+                        </div>
+                        <button type="button" onclick="calculateDBMSGrade()" style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer; width: 100%;">
+                            Calculate Grade
+                        </button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Results will appear here.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Eligibility Info -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Important Information</h2>
+            <div class="info-box">
+                <div class="important-note">
+                    <p>⚠️ Python-DB connectivity question is mandatory to pass</p>
+                </div>
+                
+                <p><strong>Eligibility Criteria for Final Exam:</strong></p>
+                <ul>
+                    <li>Average of best 5 out of first 7 weekly assessments ≥ 40/100</li>
+                    <li>AND</li>
+                    <li>Attendance in at least one quiz</li>
+                </ul>
+
+                <p><strong>Eligibility for Course Grade:</strong></p>
+                <ul>
+                    <li>Must attend the end semester exam</li>
+                    <li>AND</li>
+                    <li>Score ≥ 35% in OPE</li>
+                    <li>AND</li>
+                    <li>Pass the Python-DB connectivity question</li>
+                </ul>
+                
+                <p><strong>OPE Important Notes:</strong></p>
+                <ul>
+                    <li>First attempt is mandatory for reattempt eligibility</li>
+                    <li>Reattempt available only if first attempt was taken</li>
+                    <li>Postponement to second date possible with proof</li>
+                    <li>If postponed, no reattempt available</li>
+                    <li>OPE covers SQL queries (Week 2-3) and Python-DB connectivity (Week 7)</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <!-- Add this new section before the footer -->
+        <div class="countdown-section">
+            <h2 style="text-align: center;">Grading FAQs</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>OPE and ET Definitions</h3>
+                    <p>
+                        - OPE: Online Proctored Exam<br>
+                        - ET: End-Term Exam
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What happens if I miss OPE?</h3>
+                    <ul>
+                        <li>If ET is taken with score ≥35: "I_OP" grade (OPE must be retaken)</li>
+                        <li>If ET is not taken: "U" grade (entire course must be repeated)</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What happens if I miss ET?</h3>
+                    <ul>
+                        <li>If OPE is taken with score >35/100 AND Python-DB is correct: "I" grade (ET must be retaken)</li>
+                        <li>If either condition is not met: "U" grade (course must be repeated)</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I miss both OPE and ET?</h3>
+                    <p>"U" grade will be awarded and the course must be repeated</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>When is "I_BOTH" grade given?</h3>
+                    <p>This applies when:</p>
+                    <ul>
+                        <li>ET is absent</li>
+                        <li>AND in OPE either:
+                            <ul>
+                                <li>Score is <35 OR</li>
+                                <li>Python-DB question is incorrect</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>In this case, both ET and OPE must be retaken</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I take both OPE and ET?</h3>
+                    <ul>
+                        <li>If Python-DB is correct: Final grade depends on total score (T)</li>
+                        <li>If Python-DB is incorrect:
+                            <ul>
+                                <li>ET ≥40: "I_OP" (must retake OPE)</li>
+                                <li>ET <40: "U" (must repeat course)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'quiz1': '2025-02-23T14:00:00',
+            'quiz2': '2025-03-16T14:00:00',
+            'oppe1': '2025-03-30T07:30:00',
+            'oppe1-reattempt': '2025-04-06T07:30:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+    </script>
+
+    <script>
+        function calculateDBMSGrade() {
+            // Get input values
+            const gaa1 = parseFloat(document.getElementById('gaa').value) || 0;
+            const gaa2 = parseFloat(document.getElementById('gaa2').value) || 0;
+            const gaa3 = parseFloat(document.getElementById('gaa3').value) || 0;
+            const ope = parseFloat(document.getElementById('ope').value) || 0;
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+            const pythonDBPass = document.getElementById('pythonDBPassYes').checked;
+
+            // Calculate components
+            const assignmentComponent = 0.04 * gaa1 + 0.03 * gaa2 + 0.03 * gaa3 + 0.2 * ope;
+            const option1 = 0.45 * final + 0.15 * Math.max(quiz1, quiz2);
+            const option2 = 0.4 * final + 0.1 * quiz1 + 0.2 * quiz2;
+            const bestOption = Math.max(option1, option2);
+            const totalScore = assignmentComponent + bestOption;
+
+            // Eligibility criteria
+            const weeklyAssessmentEligible = gaa1 >= 40;
+            const quizAttended = quiz1 > 0 || quiz2 > 0;
+            const finalExamAttended = final > 0;
+            const opeEligible = ope >= 35;
+
+            // Create eligibility messages
+            const weeklyAssessmentMessage = weeklyAssessmentEligible ? 
+                "✅ Weekly assessment requirement met (Best 5 out of 9 ≥40/100)" : 
+                "❌ Weekly assessment requirement not met (<40/100)";
+            
+            const quizMessage = quizAttended ? 
+                "✅ Quiz attended" : 
+                "❌ Quiz not attended (required for course grade)";
+
+            const finalExamMessage = finalExamAttended ? 
+                "✅ Final exam attended" : 
+                "❌ Final exam not attended (required for course grade)";
+
+            const opeMessage = opeEligible ? 
+                "✅ OPE score meets minimum requirement (≥35%)" : 
+                "❌ OPE score below minimum requirement (<35%)";
+
+            const pythonDBMessage = pythonDBPass ? 
+                "✅ Python-DB connectivity question passed" : 
+                "❌ Python-DB connectivity question not passed";
+
+            // Determine course status
+            let courseStatus;
+            let statusColor;
+            
+            if (!weeklyAssessmentEligible) {
+                courseStatus = "FAIL (Weekly assignments criteria not met)";
+                statusColor = "#dc3545"; // red
+            } else if (!quizAttended) {
+                courseStatus = "FAIL (Quiz attendance required)";
+                statusColor = "#dc3545"; // red
+            } else if (!finalExamAttended) {
+                courseStatus = "FAIL (Final exam attendance required)";
+                statusColor = "#dc3545"; // red
+            } else if (!opeEligible) {
+                courseStatus = "FAIL (OPE score criteria not met)";
+                statusColor = "#dc3545"; // red
+            } else if (!pythonDBPass) {
+                courseStatus = "FAIL (Python-DB connectivity question not passed)";
+                statusColor = "#dc3545"; // red
+            } else {
+                courseStatus = "PASS (All criteria met)";
+                statusColor = "#28a745"; // green
+            }
+
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(totalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                        <strong>Course Status: ${courseStatus}</strong>
+                    </div>
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${weeklyAssessmentMessage}</li>
+                        <li>${quizMessage}</li>
+                        <li>${finalExamMessage}</li>
+                        <li>${opeMessage}</li>
+                        <li>${pythonDBMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>GAA Component (10%): ${(0.1 * gaa1).toFixed(2)}%</li>
+                    <li>OPE Component (20%): ${(0.2 * ope).toFixed(2)}%</li>
+                    <li>Option 1 (60% Final + 20% Best Quiz): ${option1.toFixed(2)}%</li>
+                    <li>Option 2 (40% Final + 20% Quiz1 + 30% Quiz2): ${option2.toFixed(2)}%</li>
+                    <li>Best Option Used: ${bestOption.toFixed(2)}%</li>
+                    <li><strong>Total Marks: ${totalScore.toFixed(2)}/100</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+    <script src="grade-calculator.js"></script>
+    <style>
+    .assessment-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .assessment-table th {
+        background-color: #f5f5f5;
+        color: #333;
+        font-weight: 600;
+        padding: 12px;
+        text-align: left;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .assessment-table td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        line-height: 1.4;
+    }
+
+    .assessment-table tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    .assessment-table em {
+        color: #666;
+        font-size: 0.9em;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+        .assessment-table th, 
+        .assessment-table td {
+            padding: 8px;
+            font-size: 0.9em;
+        }
+    }
+
+    .score-distribution {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .score-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-top: 4px solid #0f0a26;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .score-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .score-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .score-header i {
+        color: #0f0a26;
+    }
+
+    .score-value {
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #0f0a26;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .score-value::after {
+        content: '%';
+        font-size: 0.4em;
+        position: absolute;
+        bottom: 5px;
+        margin-left: 5px;
+        color: #666;
+    }
+
+    .score-detail {
+        color: #495057;
+        margin: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .score-note {
+        color: #666;
+        font-size: 0.85em;
+        font-style: italic;
+    }
+
+    .total-score {
+        background: #0f0a26;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .total-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .score-distribution {
+            grid-template-columns: 1fr;
+        }
+        
+        .score-card {
+            padding: 15px;
+        }
+        
+        .score-value {
+            font-size: 2em;
+        }
+    }
+
+    .calculator-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .calculator-box {
+        margin: 20px 0;
+        padding: 25px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 500px;
+        font-family: Arial, sans-serif;
+        text-align: left;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        font-size: 1em;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+        outline: none;
+        border-color: #213c59;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .calculator-box button {
+        width: 100%;
+        background-color: #132d4a;
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        font-size: 1.1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .result-box {
+        padding: 20px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        font-size: 1.1em;
+        line-height: 1.5;
+        color: #333;
+        max-width: 400px;
+        margin-top: 20px;
+        flex-shrink: 0;
+    }
+
+    .result-box ul {
+        margin: 0;
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+    .result-box ul li {
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .calculator-container {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .calculator-box,
+        .result-box {
+            width: 90%;
+        }
+
+        .calculator-box button {
+            font-size: 1em;
+            padding: 10px;
+        }
+
+        .input-group input {
+            font-size: 0.9em;
+            padding: 8px;
+        }
+    }
+
+    .input-group div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .input-group label {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    .input-group input[type="radio"] {
+        margin-right: 5px;
+    }
+
+
+    </style>
+
+</body>
+</html>

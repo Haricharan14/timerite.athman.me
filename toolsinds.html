@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools in Data Science - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Tools in Data Science</h1>
+        
+        <!-- Important Dates -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="important-note">
+                <p>⚠️ Note: There are NO in-centre quizzes for this course.</p>
+            </div>
+            
+            <div class="deadline-info" style="font-weight: bold;">Remote Online Exam (ROE1)</div>
+            <div>Date: March 2, 2025</div>
+            <div>Time: 13:00 - 14:00 IST</div>
+            <div>Type: Open internet, Objective assessments (45 mins)</div>
+            <div id="roe1-timer" class="timer"></div>
+            
+            <div class="deadline-info" style="font-weight: bold;">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres.</p>
+        </div>
+
+        <!-- Projects -->
+        <div class="countdown-section">
+            <h2>Take Home Projects</h2>
+            <div class="important-note">
+                <p>Projects have two components: Submissions (80%) and Peer Reviews (20%)</p>
+            </div>
+            <h3>Release Dates</h3>
+            <div class="deadline-info">Project 1 (Open Internet)</div>
+            <div>Release: February 7, 2025 (Friday)</div>
+            <div id="project1release-timer" class="timer"></div>
+            
+            <div class="deadline-info">Project 2 (Open Internet)</div>
+            <div>Release: February 28, 2025 (Friday)</div>
+            <div id="project2release-timer" class="timer"></div>
+        
+            <h3>Due Dates</h3>
+            <div class="deadline-info">Project 1 (Open Internet)</div>
+            <div>Submit by: February 17, 2025 (Monday)</div>
+            <div id="project1submit-timer" class="timer"></div>
+            
+            <div class="deadline-info">Project 2 (Open Internet)</div>
+            <div>Submit by: March 12, 2025 (Wednesday)</div>
+            <div id="project2submit-timer" class="timer"></div>
+            
+            <h3>Peer Review Dates</h3>
+            <div class="deadline-info">Project 1 (Open Internet)</div>
+            <div>Peer Review by: February 25, 2025 (Tuesday)</div>
+            <div id="project1review-timer" class="timer"></div>
+            
+            <div class="deadline-info">Project 2 (Open Internet)</div>
+            <div>Peer Review by: March 17, 2025 (Monday)</div>
+            <div id="project2review-timer" class="timer"></div>
+        </div>
+        <!-- Weekly Assignments -->
+        <div class="countdown-section">
+            <h2>Weekly Assignment Deadlines</h2>
+            <div class="important-note">
+                <p>Open internet MCQs - Best 4 out of 7 assignments will be considered</p>
+            </div>
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <!-- Score Calculation -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GAA} = \frac{\sum \text{Best 4 of 7 Weekly Assignments}}{4} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Average of best 4 out of 7 weekly assignments
+                        </div>
+                    </div>
+                    <div class="formula-item">
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> P1, P2 = 0.8 × Submission + 0.2 × Peer Review
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div class="latex-formula">
+                            \[
+                            \begin{aligned}
+                            T = & \underbrace{0.15 \times \text{GAA}}_{\text{Weekly}} + 
+                            \underbrace{0.2 \times \text{ROE1}}_{\text{Remote Exam}} + 
+                            \underbrace{0.2 \times \text{P1} + 0.2 \times \text{P2}}_{\text{Projects}} + 
+                            \underbrace{0.25 \times F}_{\text{Final}}
+                            \end{aligned}
+                            \]
+                        </div>
+                    </div>
+                    <div class="formula-explanation" style="margin-top: 20px; font-size: 1em;">
+                        <strong>Where:</strong>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li><strong>T:</strong> Final Course Score</li>
+                            <li><strong>GAA:</strong> Graded Assignments Average (Best 4 of 7)</li>
+                            <li><strong>ROE1:</strong> Remote Online Exam Score</li>
+                            <li><strong>P1, P2:</strong> Project Scores (including peer reviews)</li>
+                            <li><strong>F:</strong> Final Exam Score</li>
+                        </ul>
+                        <p><small>Note: Projects have two components - Submissions (80%) and Peer Reviews (20%)</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grade Calculator -->
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="gaa">GAA (Best 4 of 7 Weekly Assignments Average): </label>
+                            <input type="number" id="gaa" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="roe1">Remote Online Exam (ROE1) Score: </label>
+                            <input type="number" id="roe1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="project1">Project 1 Score (Including Peer Review): </label>
+                            <input type="number" id="project1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="project2">Project 2 Score (Including Peer Review): </label>
+                            <input type="number" id="project2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="final">Final Exam Score: </label>
+                            <input type="number" id="final" min="0" max="100" step="0.01" required>
+                        </div>
+                        <button type="button" onclick="calculateToolsindsGrade()" class="calculate-button">Calculate Grade</button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Results will appear here.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Eligibility Info -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li>Eligibility to write the final exam:
+                    <ul>
+                        <li>Average of best 2 out of first 5 weekly assessments ≥ 40/100</li>
+                    </ul>
+                </li>
+                <li>Eligibility to obtain the course grade:
+                    <ul>
+                        <li>Attending the end-term exam</li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'roe1': '2025-03-02T13:00:00',
+            'endterm': '2025-04-13T09:00:00',
+            'project1release': '2025-02-07T23:59:59',
+            'project1submit': '2025-02-17T23:59:59',
+            'project1review': '2025-02-25T23:59:59',
+            'project2release': '2025-02-28T23:59:59',
+            'project2submit': '2025-03-12T23:59:59',
+            'project2review': '2025-03-17T23:59:59',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+
+        function calculateToolsindsGrade() {
+            // Get input values
+            const gaa = parseFloat(document.getElementById('gaa').value) || 0;
+            const roe1 = parseFloat(document.getElementById('roe1').value) || 0;
+            const project1 = parseFloat(document.getElementById('project1').value) || 0;
+            const project2 = parseFloat(document.getElementById('project2').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            // Calculate components
+            const gaaComponent = 0.15 * gaa;
+            const roe1Component = 0.2 * roe1;
+            const project1Component = 0.2 * project1;
+            const project2Component = 0.2 * project2;
+            const finalComponent = 0.25 * final;
+
+            // Calculate final score
+            let finalScore = gaaComponent + roe1Component + project1Component + project2Component + finalComponent;
+
+            // Check eligibility criteria
+            const weeklyAssessmentEligible = gaa >= 40; // Average of best 2 out of first 5 weekly assessments ≥ 40/100
+            const finalExamAttended = final > 0;
+            const project1Submitted = project1 > 0;
+            const project2Submitted = project2 > 0;
+
+            // Create eligibility messages
+            const weeklyAssessmentMessage = weeklyAssessmentEligible ? 
+                "<span style='color: green;'>✅ Weekly assessment requirement met (Best 2 of first 5 ≥40/100)</span>" : 
+                "<span style='color: red;'>❌ Weekly assessment requirement not met (Best 2 of first 5 <40/100)</span>";
+            
+            const finalExamMessage = finalExamAttended ? 
+                "<span style='color: green;'>✅ Final exam attended</span>" : 
+                "<span style='color: red;'>❌ Final exam not attended (required for course grade)</span>";
+
+            const project1Message = project1Submitted ?
+                "<span style='color: green;'>✅ Project 1 submitted</span>" :
+                "<span style='color: red;'>❌ Project 1 not submitted</span>";
+
+            const project2Message = project2Submitted ?
+                "<span style='color: green;'>✅ Project 2 submitted</span>" :
+                "<span style='color: red;'>❌ Project 2 not submitted</span>";
+
+            // Determine course status
+            let status = "PASS";
+            let statusColor = "#28a745";
+            if (!weeklyAssessmentEligible || !finalExamAttended) {
+                status = "FAIL";
+                statusColor = "#dc3545";
+            }
+
+            // Get grade
+            const grade = window.gradeCalculator.determineGrade(finalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            document.getElementById('gradeResult').innerHTML = `
+                <div style="background-color: ${statusColor}; color: white; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+                    <strong>Course Status: ${status} (${status === "PASS" ? "All criteria met" : "Criteria not met"})</strong>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <strong>Eligibility Status:</strong>
+                    <div style="margin-bottom: 10px;">
+                        <strong>Eligibility to write the final exam:</strong>
+                        <ul>
+                            <li>${weeklyAssessmentMessage}</li>
+                        </ul>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <strong>Projects Status:</strong>
+                        <ul>
+                            <li>${project1Message}</li>
+                            <li>${project2Message}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Final Grade Eligibility:</strong>
+                        <ul>
+                            <li>${finalExamMessage}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <strong>Score Breakdown:</strong>
+                    <ul>
+                        <li>GAA Component (15%): ${gaaComponent.toFixed(2)}%</li>
+                        <li>Remote Online Exam (20%): ${roe1Component.toFixed(2)}%</li>
+                        <li>Projects (40%):
+                            <ul>
+                                <li>Project 1 (20%): ${project1Component.toFixed(2)}%</li>
+                                <li>Project 2 (20%): ${project2Component.toFixed(2)}%</li>
+                            </ul>
+                        </li>
+                        <li>Final Exam (25%): ${finalComponent.toFixed(2)}%</li>
+                        <li><strong>Final Score: ${finalScore.toFixed(2)}%</strong></li>
+                        <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

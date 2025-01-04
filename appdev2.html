@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Development 2 - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+    <div class="container">          
+        <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Application Development 2</h1>
+        
+        <!-- Major Assessments -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: March 16, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres.</p>
+
+            <!-- Weekly Assessments -->
+            <h3>Weekly Assessments</h3>
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <!-- Assessment Structure -->
+        <div class="countdown-section">
+            <h2>Assessment Structure</h2>
+            <div class="table-wrapper">
+                <table class="assessment-table">
+                    <thead>
+                        <tr>
+                            <th>Assessment Type</th>
+                            <th>Method</th>
+                            <th>Proctoring</th>
+                            <th>Score Component</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Weekly assessments<br>Weeks 1 - 11</td>
+                            <td>100% objective</td>
+                            <td>None</td>
+                            <td>GAA1 = 5 marks</td>
+                        </tr>
+                        <tr>
+                            <td>Programming Assignments<br>Weeks 1 and 2</td>
+                            <td>Auto Evaluated</td>
+                            <td>None</td>
+                            <td>GAA2 = 5 marks</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz 1 - February 23rd<br>Quiz 2 - March 16th</td>
+                            <td>Objective + Descriptive</td>
+                            <td>In person at TCS centers</td>
+                            <td>Qz1, Qz2</td>
+                        </tr>
+                        <tr>
+                            <td>End Sem - April 13th</td>
+                            <td>100% Objective</td>
+                            <td>In person at TCS centers</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Score Calculation Section -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GAA1} = \frac{\sum \text{First 10 Weekly Assignments}}{10} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Average of first 10 weekly assignments
+                        </div>
+                    </div>
+                    
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GAA2} = \frac{\text{Week 1 Programming} + \text{Week 2 Programming}}{2} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Average of programming assignments from weeks 1 & 2
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Contributes 5% to final score
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="formula-section">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div class="latex-formula">
+                            \[ T = \underbrace{0.05 \times \text{GAA1}}_{\text{weekly}} + \underbrace{0.05 \times \text{GAA2}}_{\text{programming}} + \max \begin{cases} 
+                            \underbrace{0.35F + 0.25\text{Qz1} + 0.3\text{Qz2}}_{\text{option 1}} \\
+                            \underbrace{0.5F + 0.3\max(\text{Qz1}, \text{Qz2})}_{\text{option 2}}
+                            \end{cases} \]
+                        </div>
+                    </div>
+                    <div class="formula-explanation" style="margin-top: 20px; font-size: 1em;">
+                        <strong>Where:</strong>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li><strong>GAA1:</strong> First 10 Graded assignments Average</li>
+                            <li><strong>GAA2:</strong> Programming Assignments Average</li>
+                            <li><strong>Qz1:</strong> Quiz 1 Score</li>
+                            <li><strong>Qz2:</strong> Quiz 2 Score</li>
+                            <li><strong>F:</strong> Final Exam Score</li>
+                        </ul>
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Grade Calculator Section -->
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="gaa1">GAA1 (Best 10 Weekly Assignments Average): </label>
+                            <input type="number" id="gaa1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="gaa2">GAA2 (Best 5 Programming Assignments Average): </label>
+                            <input type="number" id="gaa2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz1">Quiz 1 Score: </label>
+                            <input type="number" id="quiz1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz2">Quiz 2 Score: </label>
+                            <input type="number" id="quiz2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="final">Final Exam Score: </label>
+                            <input type="number" id="final" min="0" max="100" step="0.01" required>
+                        </div>
+                        <button type="button" 
+                                onclick="calculateGrade()" 
+                                style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer;"
+                                onmouseover="this.style.backgroundColor='#d9d9d9';" 
+                                onmouseout="this.style.backgroundColor='#182f48';">
+                            Calculate Grade
+                        </button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Results will appear here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eligibility Info -->
+        <div class="countdown-section">
+            <h2>Important Information</h2>
+            <div class="info-box">
+                <p><strong>Eligibility for End Term:</strong></p>
+                <ul>
+                    <li>Average of best 5 out of first 9 weekly assessments ≥ 40/100</li>
+                    <li>AND</li>
+                    <li>Attending at least one quiz in center</li>
+                </ul>
+
+                <p><strong>Eligibility for Course Grade:</strong></p>
+                <ul>
+                    <li>Attending the End semester exam</li>
+                </ul>
+
+                
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'quiz1': '2025-02-23T14:00:00',
+            'quiz2': '2025-03-16T14:00:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59'
+        };
+
+        // Timer function (same as systemcommands.html)
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+    </script>
+
+    <style>
+        /* Same styles as systemcommands.html */
+        .assessment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0px 0;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-size: 0.9em;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .assessment-table th {
+            background-color: #0f0a26;  /* Dark blue header from Java */
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #071424;
+        }
+
+        .assessment-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            color: #212529;
+            vertical-align: top;
+            line-height: 1.4;
+        }
+
+        .assessment-table tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        .assessment-table tr:hover {
+            background-color: #e2e6ea;
+        }
+
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+
+
+        .timer.passed {
+            background-color: #e9c4c459;
+            color: #dc3545;
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+
+        /* Add these styles */
+        .formula-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .formula-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .latex-formula {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .formula-note {
+            color: #495057;
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #6c757d;
+        }
+
+        .formula-notes {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .note-item {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .note-item i {
+            color: #28a745;
+        }
+
+        .note-item.important {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .note-item.important i {
+            color: #dc3545;
+        }
+
+        @media (max-width: 768px) {
+            .formula-section {
+                padding: 15px;
+            }
+            
+            .latex-formula {
+                font-size: 0.9em;
+            }
+
+            .timer {
+                font-size: 1.1em;
+                padding: 8px 12px;
+            }
+        }
+
+        .eligibility-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .eligibility-section {
+            margin-bottom: 20px;
+        }
+
+        .eligibility-section h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+        }
+
+        .eligibility-section h4 i {
+            color: #0f0a26;
+        }
+
+        .requirement-item {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #28a745;
+        }
+
+        .requirement-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .requirement-header i {
+            color: #28a745;
+        }
+
+        .requirement-detail {
+            color: #495057;
+            padding-left: 24px;
+            line-height: 1.4;
+        }
+
+        .requirement-item.warning {
+            border-left-color: #dc3545;
+        }
+
+        .requirement-item.warning .requirement-header i {
+            color: #dc3545;
+        }
+
+        .requirement-item.info {
+            border-left-color: #0dcaf0;
+        }
+
+        .requirement-item.info .requirement-header i {
+            color: #0dcaf0;
+        }
+
+        @media (max-width: 768px) {
+            .eligibility-box {
+                padding: 15px;
+            }
+            
+            .requirement-item {
+                padding: 12px;
+            }
+        }
+
+        .calculator-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .calculator-box {
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+            font-size: 1em;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #213c59;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        .result-box {
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #333;
+            max-width: 400px;
+            margin-top: 20px;
+            flex-shrink: 0;
+        }
+
+        .result-box ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .result-box ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .calculator-container {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .calculator-box,
+            .result-box {
+                width: 90%;
+            }
+
+            .calculator-box button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .input-group input {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+    </style>
+
+    <script>
+        // Reset the form on page load
+        window.onload = function() {
+            document.getElementById('gradeCalculator').reset();
+        };
+
+        function calculateGrade() {
+            // Get input values
+            const gaa1 = parseFloat(document.getElementById('gaa1').value) || 0;
+            const gaa2 = parseFloat(document.getElementById('gaa2').value) || 0;
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            // Calculate components
+            const gaa1Component = 0.05 * gaa1;
+            const gaa2Component = 0.05 * gaa2;
+            const option1 = 0.35 * final + 0.25 * quiz1 + 0.3 * quiz2;
+            const option2 = 0.5 * final + 0.3 * Math.max(quiz1, quiz2);
+            const bestOption = Math.max(option1, option2);
+            const totalGrade = gaa1Component + gaa2Component + bestOption;
+
+            // Eligibility criteria
+            const weeklyAssessmentEligible = gaa1 >= 40;
+            const quizAttended = quiz1 > 0 || quiz2 > 0;
+            const finalExamAttended = final > 0;
+
+            // Create eligibility messages
+            const weeklyAssessmentMessage = weeklyAssessmentEligible ?
+                "✅ Weekly assessment requirement met (Best 10 out of 11 ≥40/100)" :
+                "❌ Weekly assessment requirement not met (<40/100)";
+
+            const quizMessage = quizAttended ?
+                "✅ Quiz attended" :
+                "❌ Quiz not attended (required for course grade)";
+
+            const finalExamMessage = finalExamAttended ?
+                "✅ Final exam attended" :
+                "❌ Final exam not attended (required for course grade)";
+
+            // Determine course status
+            let courseStatus;
+            let statusColor;
+
+            if (!weeklyAssessmentEligible) {
+                courseStatus = "FAIL (Weekly assignments criteria not met)";
+                statusColor = "#dc3545"; // red
+            } else if (!quizAttended) {
+                courseStatus = "FAIL (Quiz attendance required)";
+                statusColor = "#dc3545"; // red
+            } else if (!finalExamAttended) {
+                courseStatus = "FAIL (Final exam attendance required)";
+                statusColor = "#dc3545"; // red
+            } else {
+                courseStatus = "PASS (All criteria met)";
+                statusColor = "#28a745"; // green
+            }
+
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(totalGrade);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                        <strong>Course Status: ${courseStatus}</strong>
+                    </div>
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${weeklyAssessmentMessage}</li>
+                        <li>${quizMessage}</li>
+                        <li>${finalExamMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>GAA1 (5%): ${gaa1Component.toFixed(2)}%</li>
+                    <li>GAA2 (5%): ${gaa2Component.toFixed(2)}%</li>
+                    <li>Option 1 (35% Final + 25% Quiz1 + 30% Quiz2): ${option1.toFixed(2)}%</li>
+                    <li>Option 2 (50% Final + 30% Best Quiz): ${option2.toFixed(2)}%</li>
+                    <li>Best Option Used: ${bestOption.toFixed(2)}%</li>
+                    <li><strong>Total Marks: ${totalGrade.toFixed(2)}/100</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <script>
+        function updateCountdown() {
+            const quiz1Date = new Date("February 23, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+
+            // Calculate time remaining for Quiz 1
+            updateTimer(quiz1Date, "quiz1");
+        }
+
+        function updateTimer(targetDate, quiz) {
+            const distance = targetDate - new Date().getTime();
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Update the countdown display
+            document.getElementById(`days-${quiz}`).textContent = days;
+            document.getElementById(`hours-${quiz}`).textContent = hours;
+            document.getElementById(`minutes-${quiz}`).textContent = minutes;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById(`floatingCountdown`).textContent = "TIME'S UP!";
+            }
+        }
+
+        // Update the countdown every minute
+        const countdownInterval = setInterval(updateCountdown, 60000);
+        updateCountdown(); // Initial call
+    </script>
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

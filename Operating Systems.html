@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Operating Systems</h1>
+        
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: March 16, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres.</p>
+
+            <h3>Weekly Assignment Deadlines</h3>
+    
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                
+                    <div class="formula-item">
+                        <div class="latex-formula enhanced-formula">
+                            \[ \text{GAA} = \frac{\sum \text{First 10 Weekly Assignments}}{10} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Average of first 10 weekly assignments
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section" style="max-width: 100%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 10px; border: 0px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div style="font-size: 1.1em; line-height: 2; position: relative; text-align: left;">
+                            \[
+                            T = 
+                            \underbrace{0.1 \times \text{GAA}}_{\text{Weekly Assignments}} + 
+                            \underbrace{0.4 \times \text{F}}_{\text{Final Exam}} + 
+                            \underbrace{0.25 \times \text{Qz1}}_{\text{Quiz 1}} + 
+                            \underbrace{0.25 \times \text{Qz2}}_{\text{Quiz 2}}
+                            \]
+                        </div>
+                    </div>
+                    <div class="formula-explanation" style="margin-top: 20px; font-size: 1em;">
+                        <strong>Where:</strong>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li><strong>T:</strong> Final Course Score</li>
+                            <li><strong>GAA:</strong> Weekly Assignment Average</li>
+                            <li><strong>Qz1:</strong> Quiz 1 Score</li>
+                            <li><strong>Qz2:</strong> Quiz 2 Score</li>
+                            <li><strong>F:</strong> Final Exam Score</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <div class="input-group">
+                        <label for="gaa">GAA (First 10 Weekly Assignments Average):</label>
+                        <input type="number" id="gaa" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz1">Quiz 1 Score:</label>
+                        <input type="number" id="quiz1" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz2">Quiz 2 Score:</label>
+                        <input type="number" id="quiz2" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="final">Final Exam Score:</label>
+                        <input type="number" id="final" min="0" max="100" step="0.01">
+                    </div>
+                    <button onclick="calculateOSGrade()">Calculate Grade</button>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p style="color: #666; text-align: center;">Result will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Eligibility Criteria</h2>
+            <div class="eligibility-criteria-box">
+                <h3>Eligibility for End Term Exam</h3>
+                <ul>
+                    <li>Average of best 5 out of first 7 weekly assignments scores >= 40/100</li>
+                    <li>Attending at least one of the 2 quizzes in the centre</li>
+                </ul>
+
+                <h3>Eligibility for Final Course Grade</h3>
+                <ul>
+                    <li>Attending the End Term exam</li>
+                </ul>
+            </div>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        const deadlines = {
+            'quiz1': '2025-02-23T14:00:00',
+            'quiz2': '2025-03-16T14:00:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+
+        function calculateOSGrade() {
+            // Get input values
+            const gaa = parseFloat(document.getElementById('gaa').value) || 0;
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            // Calculate components
+            const gaaComponent = 0.1 * gaa;
+            const quiz1Component = 0.25 * quiz1;
+            const quiz2Component = 0.25 * quiz2;
+            const finalComponent = 0.4 * final;
+
+            // Calculate final score
+            const finalScore = gaaComponent + quiz1Component + quiz2Component + finalComponent;
+
+            // Check eligibility criteria
+            const hasOneQuiz = quiz1 > 0 || quiz2 > 0;
+            const hasFinal = final > 0;
+            const weeklyAssessmentEligible = gaa >= 40;
+
+            // Create eligibility messages
+            const weeklyAssessmentMessage = weeklyAssessmentEligible ?
+                "<span style='color: green;'>✅ Weekly assessment requirement met (≥40/100)</span>" :
+                "<span style='color: red;'>❌ Weekly assessment requirement not met (<40/100)</span>";
+            const quizMessage = hasOneQuiz ?
+                "<span style='color: green;'>✅ At least one quiz attended</span>" :
+                "<span style='color: red;'>❌ No quiz attended (required for eligibility)</span>";
+            const finalMessage = hasFinal ?
+                "<span style='color: green;'>✅ End term exam attended</span>" :
+                "<span style='color: red;'>❌ End term exam not attended (required for course grade)</span>";
+
+            // Determine course status
+            let courseStatus;
+            let statusColor;
+
+            if (!weeklyAssessmentEligible || !hasOneQuiz) {
+                courseStatus = "FAIL (Eligibility criteria not met)";
+                statusColor = "#dc3545";
+            } else if (!hasFinal) {
+                courseStatus = "FAIL (End term exam attendance required)";
+                statusColor = "#dc3545";
+            } else {
+                courseStatus = "PASS (All criteria met)";
+                statusColor = "#28a745";
+            }
+
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(finalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                        <strong>Course Status: ${courseStatus}</strong>
+                    </div>
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${weeklyAssessmentMessage}</li>
+                        <li>${quizMessage}</li>
+                        <li>${finalMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>GAA Component (10%): ${gaaComponent.toFixed(2)}%</li>
+                    <li>Quiz 1 Component (25%): ${quiz1Component.toFixed(2)}%</li>
+                    <li>Quiz 2 Component (25%): ${quiz2Component.toFixed(2)}%</li>
+                    <li>Final Exam Component (40%): ${finalComponent.toFixed(2)}%</li>
+                    <li><strong>Final Score: ${finalScore.toFixed(2)}%</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+    <script src="grade-calculator.js"></script>
+</body>
+</html> 

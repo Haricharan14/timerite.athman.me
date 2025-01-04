@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 60px 0;
+        border-radius: 15px;
+    }
+
+    .countdown-section {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .info-box {
+        padding: 10px;
+    }
+
+    .info-box ul, .info-box ol {
+        padding: 15px;
+    }
+
+    .timer {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+
+    .formula {
+        margin: 10px -10px;
+        padding: 15px 0;
+        font-size: 0.9em;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .grade-table {
+        font-size: 0.9em;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .grade-table th, .grade-table td {
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .calculator-container {
+        padding: 15px;
+    }
+
+    .calculator-container input, 
+    .calculator-container select,
+    .calculator-container button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98%;
+        margin: 50px 0;
+    }
+
+    .countdown-section {
+        font-size: 0.95em;
+    }
+
+    .info-box {
+        font-size: 0.9em;
+    }
+
+    .top-bar {
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Python Programming - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Introduction to Python Programming</h1>
+        
+        <!-- Important Dates -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">OPPE 1: March 2, 2025 (Sunday, 7:30 AM)</div>
+            <div id="oppe1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: No Quiz 2 for this subject</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">OPPE 2: April 6, 2025 (Sunday, 7:30 AM)</div>
+            <div id="oppe2-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            
+            <p>Quiz 1, Quiz 2, and End Term to be attended in person at designated centres.</p>
+            <p>For OPPE1 & OPPE2, you will be allocated one of 3 slots. Please keep yourself free on the given dates.</p>
+        </div>
+
+        <!-- Weekly Assignments -->
+        <div class="countdown-section">
+            <h2>Weekly Assignment Deadlines</h2>
+            
+            <div class="deadline-info">Week 1: January 22, 2025</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 29, 2025</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 5, 2025</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 12, 2025</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 19, 2025</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: February 26, 2025</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 5, 2025</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 12, 2025</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 19, 2025</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 26, 2025</div>
+            <div id="week10-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 11: April 2, 2025</div>
+            <div id="week11-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 12: April 9, 2025</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+        <!-- Score Calculation -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GAA} = \frac{\sum \text{Sum of First 10 Weekly Assignments}}{10} \]
+                        </div>
+                    </div>
+                </div>
+                <div class="formula-section">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div class="latex-formula">
+                            <div class="formula">
+                                \[T = \underbrace{0.1 \times \text{GAA1}}_{\text{objective}} + 
+                                \underbrace{0.1 \times \text{GAA2}}_{\text{programming}} + 
+                                \underbrace{0.1 \times \text{Qz1}}_{\text{quiz}} + 
+                                \underbrace{0.4 \times F}_{\text{final}} \]
+                                \[+ \underbrace{0.25 \times \max(\text{PE1}, \text{PE2})}_{\text{best OPPE}} + 
+                                \underbrace{0.15 \times \min(\text{PE1}, \text{PE2})}_{\text{other OPPE}}\]
+                            </div>
+                            <p style="text-align: left;">Where:</p>
+                            <ul style="text-align: left;">
+                                <li>\(\text{GAA1}\) = Average of best 10 out of first 11 objective assignments</li>
+                                <li>\(\text{GAA2}\) = Average of best 10 out of first 11 programming assignments</li>
+                                <li>\(\text{Qz1}\) = Quiz 1 score (0 if not attempted)</li>
+                                <li>\(\text{PE1}\) = OPPE1 score</li>
+                                <li>\(\text{PE2}\) = OPPE2 score</li>
+                                <li>\(F\) = Final exam score</li>
+                            </ul>
+                            <p><small>Note: Final score T is capped at 100</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grade Calculator -->
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="gaa1">GAA1 (Objective Assignments Average): </label>
+                            <input type="number" id="gaa1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="gaa2">GAA2 (Programming Assignments Average): </label>
+                            <input type="number" id="gaa2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz1">Quiz 1 Score: </label>
+                            <input type="number" id="quiz1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="pe1">OPPE 1 Score: </label>
+                            <input type="number" id="pe1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="pe2">OPPE 2 Score: </label>
+                            <input type="number" id="pe2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="final">Final Exam Score: </label>
+                            <input type="number" id="final" min="0" max="100" step="0.01" required>
+                        </div>
+                        <button type="button" onclick="calculatePythonGrade()" style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer; width: 100%;">
+                            Calculate Grade
+                        </button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Results will appear here.</p>
+                </div>
+            </div>
+        </div>
+        <!-- OPPE Eligibility Info -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>OPPE Information</h2>
+            <div class="info-box">
+                <div class="important-note">
+                    <p>⚠️ Important Note:</p>
+                    <p>You will be allocated one of 3 slots for OPPE1 & OPPE2. Please keep yourself free on the given dates.</p>
+                </div>
+
+                <p><strong>OPPE 1 Eligibility:</strong></p>
+                <ul>
+                    <li>Must complete the OPPE System Compatibility Test (SCT) exam</li>
+                    <li>OPPE1 will not be scheduled without completing SCT</li>
+                    <li><a>Check Grading doc for OPPE SCT SoP Document</a></li>
+                </ul>
+
+                <p><strong>OPPE 2 Eligibility:</strong></p>
+                <ul>
+                    <li>Average of best 5 out of first 9 Weekly programming assignments (GrPA) ≥ 40/100</li>
+                    <li>AND</li>
+                    <li>Average of best 5 out of first 9 weekly assessments (objective and programming) scores ≥ 40/100</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <!-- Final Exam Eligibility -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Course Eligibility Criteria</h2>
+            <div class="info-box">
+                <p><strong>Final Exam Eligibility:</strong></p>
+                <ul>
+                    <li>Average of best 5 out of first 9 weekly assessments (objective and programming) scores ≥ 40/100</li>
+                </ul>
+
+                <p><strong>Final Course Grade Eligibility:</strong></p>
+                <ul>
+                    <li>Must attend the end term exam</li>
+                    <li>AND</li>
+                    <li>Minimum score in one of the programming exams (OPPE1, OPPE2) ≥ 40/100</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <!-- Bonus Info -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Bonus Information</h2>
+            <div class="info-box">
+                <div class="important-note">
+                    <p>⚠️ Important Note:</p>
+                    <p>Bonus marks are only applicable if you complete the SCT exam. Mock test attendance alone does not qualify for bonus marks.</p>
+                </div>
+            </div>
+            </div>  
+        </div>
+
+        <!-- Add this FAQ section at the end, before the closing body tag -->
+        <div class="countdown-section">
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Q: What happens if both OPE1/OPE2 and ET are absent?</h3>
+                    <p>A: The grade is U, and the student must repeat the course.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if OPE1/OPE2 is absent but ET is present and T ≥35?</h3>
+                    <p>A: The grade is I_OP, and the student must:</p>
+                    <ul>
+                        <li>Complete OPE alone in the next term.</li>
+                        <li>GA, quiz, and ET marks will be carried over, OR</li>
+                        <li>Repeat the course.</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if OPE1/OPE2 is absent, ET is present, and T <35?</h3>
+                    <p>A: The grade is U, and the student must repeat the course.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if OPE1/OPE2 is present but the score is <30/100, ET is present, and T ≥40?</h3>
+                    <p>A: The grade is I_OP, and the student must:</p>
+                    <ul>
+                        <li>Redo OPE alone in the next term.</li>
+                        <li>GA, quiz, and ET marks will be carried over, OR</li>
+                        <li>Repeat the course.</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if both OPE1/OPE2 and ET are present, but T <40?</h3>
+                    <p>A: The grade is U, and the student must repeat the course.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if OPE1/OPE2 is present with a score <30/100, and ET is absent?</h3>
+                    <p>A: The grade is I_BOTH, and the student must:</p>
+                    <ul>
+                        <li>Redo the End Term exam and OPE alone in the next term.</li>
+                        <li>GA and quiz marks will be carried over, OR</li>
+                        <li>Repeat the course.</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if OPE1/OPE2 is present with a score >30/100, but ET is absent?</h3>
+                    <p>A: The grade is I, and the student must:</p>
+                    <ul>
+                        <li>Complete ET alone in the next term.</li>
+                        <li>GA, quiz, and OPPE marks will be carried over, OR</li>
+                        <li>Repeat the course.</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if both OPE1/OPE2 and ET are present?</h3>
+                    <p>A: The grade is based on the total score T.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'quiz1': '2025-02-23T14:00:00',
+            'oppe1': '2025-03-02T07:30:00',
+            'oppe2': '2025-04-06T07:30:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-22T23:59:59',
+            'week2': '2025-01-29T23:59:59',
+            'week3': '2025-02-05T23:59:59',
+            'week4': '2025-02-12T23:59:59',
+            'week5': '2025-02-19T23:59:59',
+            'week6': '2025-02-26T23:59:59',
+            'week7': '2025-03-05T23:59:59',
+            'week8': '2025-03-12T23:59:59',
+            'week9': '2025-03-19T23:59:59',
+            'week10': '2025-03-26T23:59:59',
+            'week11': '2025-04-02T23:59:59',
+            'week12': '2025-04-09T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+    </script>
+
+    <script>
+        function calculatePythonGrade() {
+            // Get input values
+            const gaa1 = parseFloat(document.getElementById('gaa1').value) || 0; // Objective
+            const gaa2 = parseFloat(document.getElementById('gaa2').value) || 0; // Programming
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const pe1 = parseFloat(document.getElementById('pe1').value) || 0; // OPPE1
+            const pe2 = parseFloat(document.getElementById('pe2').value) || 0; // OPPE2
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            // Calculate components
+            const gaa1Component = 0.1 * gaa1;
+            const gaa2Component = 0.1 * gaa2;
+            const quizComponent = 0.1 * quiz1;
+            const finalComponent = 0.4 * final;
+            
+            // Calculate OPPE components (25% best + 15% other)
+            const bestOPPE = Math.max(pe1, pe2);
+            const otherOPPE = Math.min(pe1, pe2);
+            const oppeComponent = (0.25 * bestOPPE) + (0.15 * otherOPPE);
+
+            // Calculate final score
+            let finalScore = gaa1Component + gaa2Component + quizComponent + finalComponent + oppeComponent;
+
+            // Cap total score at 100
+            finalScore = Math.min(finalScore, 100);
+
+            // Eligibility criteria
+            const weeklyAssessmentEligible = (gaa1 + gaa2) / 2 >= 40;
+            const quizAttended = quiz1 > 0;
+            const oppeAttended = pe1 > 0 || pe2 > 0;
+            const finalExamAttended = final > 0;
+
+            // Create eligibility messages
+            const weeklyAssessmentMessage = weeklyAssessmentEligible ? 
+                "✅ Weekly assessment requirement met (Average ≥40/100)" : 
+                "❌ Weekly assessment requirement not met (<40/100)";
+            
+            const quizMessage = quizAttended ? 
+                "✅ Quiz attended" : 
+                "❌ Quiz not attended (required for course grade)";
+
+            const oppeMessage = oppeAttended ? 
+                "✅ At least one OPPE attended" : 
+                "❌ No OPPE attended (required for course grade)";
+
+            const finalExamMessage = finalExamAttended ? 
+                "✅ Final exam attended" : 
+                "❌ Final exam not attended (required for course grade)";
+
+            // Determine course status
+            let courseStatus;
+            let statusColor;
+            
+            if (!weeklyAssessmentEligible) {
+                courseStatus = "FAIL (Weekly assignments criteria not met)";
+                statusColor = "#dc3545";
+            } else if (!quizAttended) {
+                courseStatus = "FAIL (Quiz attendance required)";
+                statusColor = "#dc3545";
+            } else if (!oppeAttended) {
+                courseStatus = "FAIL (OPPE attendance required)";
+                statusColor = "#dc3545";
+            } else if (!finalExamAttended) {
+                courseStatus = "FAIL (Final exam attendance required)";
+                statusColor = "#dc3545";
+            } else {
+                courseStatus = "PASS (All criteria met)";
+                statusColor = "#28a745";
+            }
+
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(finalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                        <strong>Course Status: ${courseStatus}</strong>
+                    </div>
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${weeklyAssessmentMessage}</li>
+                        <li>${quizMessage}</li>
+                        <li>${oppeMessage}</li>
+                        <li>${finalExamMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>GAA1 Component (10% - Objective): ${gaa1Component.toFixed(2)}%</li>
+                    <li>GAA2 Component (10% - Programming): ${gaa2Component.toFixed(2)}%</li>
+                    <li>Quiz Component (10%): ${quizComponent.toFixed(2)}%</li>
+                    <li>Final Exam (40%): ${finalComponent.toFixed(2)}%</li>
+                    <li>OPPE Component (40% total):
+                        <ul>
+                            <li>Best OPPE (25%): ${(0.25 * bestOPPE).toFixed(2)}%</li>
+                            <li>Other OPPE (15%): ${(0.15 * otherOPPE).toFixed(2)}%</li>
+                            <li>Total OPPE: ${oppeComponent.toFixed(2)}%</li>
+                        </ul>
+                    </li>
+                    <li><strong>Final Score: ${finalScore.toFixed(2)}%</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

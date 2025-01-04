@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Practice - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Deep Learning Practice</h1>
+        
+        <!-- Important Dates -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: March 16, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 3: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres.</p>
+        </div>
+        <!-- Weekly Assignments -->
+        <div class="countdown-section">
+            <h2>Weekly Assignment Deadlines</h2>
+            
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <!-- Programming Assignments -->
+        <div class="countdown-section">
+            <h3>Non-Proctored Programming Assignments</h3>
+            <div class="deadline-info">NPPE1: Sunday, February 9, 2025</div>
+            <div id="nppe1-timer" class="timer"></div>
+            
+            <div class="deadline-info">NPPE2: Opens on March 7, 2025</div>
+            <div id="nppe2o-timer" class="timer"></div>
+            <div class="deadline-info">NPPE2: Closes on March 9, 2025</div>
+            <div id="nppe2c-timer" class="timer"></div>
+            
+            <div class="deadline-info">NPPE3: Opens on March 21, 2025</div>
+            <div id="nppe3o-timer" class="timer"></div>
+            <div class="deadline-info">NPPE3: Closes on March 23, 2025</div>
+            <div id="nppe3c-timer" class="timer"></div>
+        </div>
+
+        <!-- NPPE Dates -->
+        <div class="countdown-section">
+            <h3>NPPE Schedule</h3>
+            <table class="nppe-schedule-table">
+                <thead>
+                    <tr>
+                        <th>Exam</th>
+                        <th>Syllabus</th>
+                        <th>NPPE Dates</th>
+                        <th>Timing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NPPE1</td>
+                        <td>W1-W4</td>
+                        <td>Sunday, February 9, 2025</td>
+                        <td>10 AM - 12 Noon IST</td>
+                    </tr>
+                    <tr>
+                        <td>NPPE2 Opens</td>
+                        <td>W5-W8</td>
+                        <td>Friday, March 7, 2025</td>
+                        <td>5 PM IST</td>
+                    </tr>
+                    <tr>
+                        <td>NPPE2 Closes</td>
+                        <td>W5-W8</td>
+                        <td>Sunday, March 9, 2025</td>
+                        <td>5 PM IST</td>
+                    </tr>
+                    <tr>
+                        <td>NPPE3 Opens</td>
+                        <td>W9-W12</td>
+                        <td>Friday, March 21, 2025</td>
+                        <td>5 PM IST</td>
+                    </tr>
+                    <tr>
+                        <td>NPPE3 Closes</td>
+                        <td>W9-W12</td>
+                        <td>Sunday, March 23, 2025</td>
+                        <td>5 PM IST</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Score Calculation -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ GA = \frac{\sum \text{First 10 Weekly Assignments}}{10} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Average score in First 10 weekly assignments
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div class="latex-formula">
+                            \[
+                            T = \underbrace{0.2 \times GA}_{\text{Weekly Assignments}} + 
+                            \underbrace{0.15 \times \text{Qz1} + 0.15 \times \text{Qz2} + 0.15 \times \text{Qz3}}_{\text{Quizzes}} + 
+                            \]
+                            \[
+                            \underbrace{0.2 \times \max(\text{NPPE1}, \text{NPPE2}, \text{NPPE3})}_{\text{Best NPPE}} + 
+                            \]
+                            \[
+                            \underbrace{0.15 \times \text{second best}(\text{NPPE1}, \text{NPPE2}, \text{NPPE3})}_{\text{Second Best NPPE}} +
+                            \]
+                            \[
+                            \underbrace{0.1 \times \min(\text{NPPE1}, \text{NPPE2}, \text{NPPE3})}_{\text{Lowest NPPE}}
+                            \]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade Calculator -->
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="gaa">GA (Assignments Average): </label>
+                            <input type="number" id="gaa" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz1">Quiz 1 Score: </label>
+                            <input type="number" id="quiz1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz2">Quiz 2 Score: </label>
+                            <input type="number" id="quiz2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz3">Quiz 3 Score: </label>
+                            <input type="number" id="quiz3" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nppe1">NPPE1 Score: </label>
+                            <input type="number" id="nppe1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nppe2">NPPE2 Score: </label>
+                            <input type="number" id="nppe2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nppe3">NPPE3 Score: </label>
+                            <input type="number" id="nppe3" min="0" max="100" step="0.01" required>
+                        </div>
+                        <button type="button" onclick="calculateDeepLearningPracticeGrade()" style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer; width: 100%;">
+                            Calculate Grade
+                        </button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Results will appear here.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'quiz1': '2025-02-23T14:00:00',
+            'quiz2': '2025-03-16T14:00:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59',
+            'nppe1': '2025-02-09T10:00:00',
+            'nppe2o': '2025-03-07T17:00:00',
+            'nppe2c': '2025-03-09T17:00:00',
+            'nppe3o': '2025-03-21T17:00:00',
+            'nppe3c': '2025-03-23T17:00:00'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+
+        function calculateDeepLearningPracticeGrade() {
+            // Get input values
+            const gaa = parseFloat(document.getElementById('gaa').value) || 0;
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const quiz3 = parseFloat(document.getElementById('quiz3').value) || 0;
+            const nppe1 = parseFloat(document.getElementById('nppe1').value) || 0;
+            const nppe2 = parseFloat(document.getElementById('nppe2').value) || 0;
+            const nppe3 = parseFloat(document.getElementById('nppe3').value) || 0;
+
+            // Calculate components using the correct formula
+            const gaComponent = 0.2 * gaa;
+            const quiz1Component = 0.15 * quiz1;
+            const quiz2Component = 0.15 * quiz2;
+            const quiz3Component = 0.15 * quiz3;
+
+            // Calculate NPPE components
+            const nppeScores = [nppe1, nppe2, nppe3];
+            nppeScores.sort((a, b) => a - b); // Sort scores in ascending order
+
+            const bestNPPE = nppeScores[2] || 0;
+            const secondBestNPPE = nppeScores[1] || 0;
+            const lowestNPPE = nppeScores[0] || 0;
+
+            const bestNPPEComponent = 0.2 * bestNPPE;
+            const secondBestNPPEComponent = 0.15 * secondBestNPPE;
+            const lowestNPPEComponent = 0.1 * lowestNPPE;
+
+            // Calculate final score
+            let finalScore = gaComponent + quiz1Component + quiz2Component + quiz3Component + 
+                             bestNPPEComponent + secondBestNPPEComponent + lowestNPPEComponent;
+
+            // Cap total score at 100
+            finalScore = Math.min(finalScore, 100);
+        
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(finalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <strong>No eligibility criteria for this course.</strong>
+                </div>
+                <ul>
+                    <li>GA Component (20%): ${gaComponent.toFixed(2)}%</li>
+                    <li>Quiz 1 (15%): ${quiz1Component.toFixed(2)}%</li>
+                    <li>Quiz 2 (15%): ${quiz2Component.toFixed(2)}%</li>
+                    <li>Quiz 3 (15%): ${quiz3Component.toFixed(2)}%</li>
+                    <li>Best NPPE Score (20%): ${bestNPPEComponent.toFixed(2)}%</li>
+                    <li>Second Best NPPE Score (15%): ${secondBestNPPEComponent.toFixed(2)}%</li>
+                    <li>Lowest NPPE Score (10%): ${lowestNPPEComponent.toFixed(2)}%</li>
+                    <li><strong>Final Score: ${finalScore.toFixed(2)}%</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

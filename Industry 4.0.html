@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry 4.0 - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Industry 4.0</h1>
+        
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="deadline-info">Quiz 1: February 23rd, 2025</div>
+            <div id="quiz1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Quiz 2: March 16th, 2025</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13th, 2025</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres</p>
+
+            <h3>Assignment Deadlines</h3>
+            <h4>Release Dates</h4>
+            <div class="deadline-info">Assignment 1: February 7th, 2025 (Friday)</div>
+            <div id="assignment1release-timer" class="timer"></div>
+            
+            <div class="deadline-info">Assignment 2: February 14th, 2025 (Friday)</div>
+            <div id="assignment2release-timer" class="timer"></div>
+            
+            <div class="deadline-info">Assignment 3: March 7th, 2025 (Friday)</div>
+            <div id="assignment3release-timer" class="timer"></div>
+            <h4>Submission Dates</h4>
+            <div class="deadline-info">Assignment 1: February 16th, 2025 (Sunday)</div>
+            <div id="assignment1submit-timer" class="timer"></div>
+            
+            <div class="deadline-info">Assignment 2: March 2nd, 2025 (Sunday)</div>
+            <div id="assignment2submit-timer" class="timer"></div>
+            
+            <div class="deadline-info">Assignment 3: March 18th, 2025 (Tuesday)</div>
+            <div id="assignment3submit-timer" class="timer"></div>
+        </div>
+
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Component Calculations</h3>
+                
+                    <div class="formula-item">
+                        <div class="latex-formula enhanced-formula">
+                            \[ A = \text{Sum of Best 2 Assignments} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Each assignment is worth 20 marks
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section" style="max-width: 100%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 10px; border: 0px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h3>Final Score Components</h3>
+                    <div class="final-formula">
+                        <div style="font-size: 1.1em; line-height: 2; position: relative; text-align: left;">
+                            \[
+                            \text{Total Score} = 
+                            \underbrace{Q1 + Q2}_{\text{15 marks}} + 
+                            \underbrace{\text{Game}}_{\text{5 marks}} +
+                            \underbrace{A}_{\text{40 marks}} +
+                            \underbrace{F}_{\text{40 marks}}
+                            \]
+                        </div>
+                    </div>
+                    <div class="formula-explanation" style="margin-top: 20px; font-size: 1em;">
+                        <strong>Where:</strong>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li><strong>Q1, Q2:</strong> Quiz scores (7.5 marks each)</li>
+                            <li><strong>Game:</strong> Yield Management Game (4 marks + 1 bonus mark)</li>
+                            <li><strong>A:</strong> Sum of Best 2 assignments out of 3</li>
+                            <li><strong>F:</strong> Final Exam (capped at 40 marks)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <div class="input-group">
+                        <label for="quiz1">Quiz 1 Score (max 7.5):</label>
+                        <input type="number" id="quiz1" min="0" max="7.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz2">Quiz 2 Score (max 7.5):</label>
+                        <input type="number" id="quiz2" min="0" max="7.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="game">Game Score (max 5):</label>
+                        <input type="number" id="game" min="0" max="5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="assignment1">Assignment 1 Score (max 20):</label>
+                        <input type="number" id="assignment1" min="0" max="20" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="assignment2">Assignment 2 Score (max 20):</label>
+                        <input type="number" id="assignment2" min="0" max="20" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="assignment3">Assignment 3 Score (max 20):</label>
+                        <input type="number" id="assignment3" min="0" max="20" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="final">Final Exam Score (max 45):</label>
+                        <input type="number" id="final" min="0" max="45" step="0.1">
+                    </div>
+                    <button onclick="calculateIndustry4Grade()">Calculate Grade</button>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p style="color: #666; text-align: center;">Result will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Eligibility Criteria</h2>
+            <div class="eligibility-criteria-box">
+                <h3>Eligibility for End Term Exam</h3>
+                <ul>
+                    <li>Submission of at least 1 out of the first three assignments</li>
+                    <li>Attending at least one of the two quizzes</li>
+                    <li>Participating in the Yield Management Game AND (Participation in the game OR Project Submission)</li>
+                </ul>
+
+                <h3>Eligibility for Final Course Grade</h3>
+                <ul>
+                    <li>Attending the End Term exam</li>
+                </ul>
+            </div>
+            </div>  
+        </div>
+        
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Project Details (10 Marks)</h2>
+            <div class="project-details-box">
+                <h3>Project Components</h3>
+                <div class="project-component">
+                    <h4>Project Submission (5 marks)</h4>
+                    <p>Evaluated based on individual contributions within the group.</p>
+                    <ul>
+                        <li>Identify a problem: Objective, Constraint, decision variables etc.</li>
+                        <li>Identify the relevant data</li>
+                        <li>Approach to solve the problem</li>
+                        <li>2 paged summary containing the above three points</li>
+                    </ul>
+                </div>
+
+                <div class="project-component">
+                    <h4>Presentation and Viva (5 marks)</h4>
+                    <p>Assessed by a panel</p>
+                </div>
+
+                <h3>Project Guidelines</h3>
+                <ul>
+                    <li>Teams of 5 members</li>
+                    <li>Teams need to be formed and informed to us by the end of Week 2</li>
+                    <li>2 paged project summary needs to submitted by the end of Week 8</li>
+                    <li>The concepts to be applied must strictly align with the topics covered in the BA and Industry 4.0 courses</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            const deadlines = {
+                'quiz1': '2025-02-23T14:00:00',
+                'quiz2': '2025-03-16T14:00:00',
+                'endterm': '2025-04-13T09:00:00',
+                'assignment1release': '2025-02-07T23:59:59',
+                'assignment1submit': '2025-02-16T23:59:59',
+                'assignment2release': '2025-02-14T23:59:59',
+                'assignment2submit': '2025-03-02T23:59:59',
+                'assignment3release': '2025-03-07T23:59:59',
+                'assignment3submit': '2025-03-18T23:59:59'
+            };
+
+            function updateTimer(elementId, deadline) {
+                const element = document.getElementById(elementId);
+                function update() {
+                    const now = new Date().getTime();
+                    const target = new Date(deadline).getTime();
+                    const difference = target - now;
+                    if (difference < 0) {
+                        element.innerHTML = "DEADLINE PASSED";
+                        element.classList.add('passed');
+                        return;
+                    }
+
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                    element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+                }
+
+                update();
+                setInterval(update, 1000);
+            }
+
+            // Initialize all timers
+            Object.entries(deadlines).forEach(([key, deadline]) => {
+                updateTimer(`${key}-timer`, deadline);
+            });
+
+            function calculateIndustry4Grade() {
+                // Get input values
+                const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+                const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+                const game = parseFloat(document.getElementById('game').value) || 0;
+                const assignment1 = parseFloat(document.getElementById('assignment1').value) || 0;
+                const assignment2 = parseFloat(document.getElementById('assignment2').value) || 0;
+                const assignment3 = parseFloat(document.getElementById('assignment3').value) || 0;
+                const final = Math.min(40, parseFloat(document.getElementById('final').value) || 0);
+
+                // Calculate best 2 assignments
+                const assignments = [assignment1, assignment2, assignment3].sort((a, b) => b - a);
+                const bestTwoAssignments = assignments[0] + assignments[1];
+
+                // Calculate total score
+                const totalScore = quiz1 + quiz2 + game + bestTwoAssignments + final;
+
+                // Check eligibility criteria
+                const hasOneAssignment = assignment1 > 0 || assignment2 > 0 || assignment3 > 0;
+                const hasOneQuiz = quiz1 > 0 || quiz2 > 0;
+                const hasGame = game > 0;
+                const hasFinal = final > 0;
+
+                // Create eligibility messages
+                const assignmentMessage = hasOneAssignment ?
+                    "<span style='color: green;'>✅ At least one assignment submitted</span>" :
+                    "<span style='color: red;'>❌ No assignments submitted</span>";
+                const quizMessage = hasOneQuiz ?
+                    "<span style='color: green;'>✅ At least one quiz attended</span>" :
+                    "<span style='color: red;'>❌ No quiz attended</span>";
+                const gameMessage = hasGame ?
+                    "<span style='color: green;'>✅ Game participated</span>" :
+                    "<span style='color: red;'>❌ Game not participated</span>";
+                const finalMessage = hasFinal ?
+                    "<span style='color: green;'>✅ End term exam attended</span>" :
+                    "<span style='color: red;'>❌ End term exam not attended</span>";
+
+                // Determine course status
+                let courseStatus;
+                let statusColor;
+
+                if (!hasOneAssignment || !hasOneQuiz || !hasGame) {
+                    courseStatus = "FAIL (Eligibility criteria not met)";
+                    statusColor = "#dc3545";
+                } else if (!hasFinal) {
+                    courseStatus = "FAIL (End term exam attendance required)";
+                    statusColor = "#dc3545";
+                } else {
+                    courseStatus = "PASS (All criteria met)";
+                    statusColor = "#28a745";
+                }
+            
+                // Use the grade calculator to determine the grade
+                const grade = window.gradeCalculator.determineGrade(totalScore);
+                const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+                // Display results
+                const resultBox = document.getElementById('gradeResult');
+                resultBox.innerHTML = `
+                    <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                        <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                            <strong>Course Status: ${courseStatus}</strong>
+                        </div>
+                        <strong>Eligibility Status:</strong>
+                        <ul>
+                            <li>${assignmentMessage}</li>
+                            <li>${quizMessage}</li>
+                            <li>${gameMessage}</li>
+                            <li>${finalMessage}</li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li>Quizzes (15%): ${(quiz1 + quiz2).toFixed(2)}</li>
+                        <li>Game (5%): ${game.toFixed(2)}</li>
+                        <li>Best 2 Assignments (40%): ${bestTwoAssignments.toFixed(2)}</li>
+                        <li>Final Exam (40%): ${final.toFixed(2)}</li>
+                        <li><strong>Total Score: ${totalScore.toFixed(2)}</strong></li> 
+                        <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                    </ul>
+                `;
+            }
+        </script>
+
+        <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+        <footer class="copyright">
+            <p>&copy; 2024 Timerite. All rights reserved.</p>
+        </footer>
+        <script src="grade-calculator.js"></script>
+    </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Data Management - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Business Data Management</h1>
+        
+        <!-- Important Dates -->
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <div class="important-note">
+                <p>⚠️ Note: There will be NO Quiz 1 for BDM.</p>
+            </div>
+            
+            <div class="deadline-info">Quiz 2: March 16, 2025 (Sunday, 2:00 PM)</div>
+            <div id="quiz2-timer" class="timer"></div>
+            
+            <div class="deadline-info">End Term: April 13, 2025 (Sunday, 9:00 AM)</div>
+            <div id="endterm-timer" class="timer"></div>
+            <p>Above to be attended in person at designated centres.</p>
+                        
+            <div class="deadline-info">Remote Online Exam (ROE)</div>
+            <p class="note">Date to be announced</p>
+
+        </div>
+
+        <!-- Weekly Assignments -->
+        <div class="countdown-section">
+            <h2>Weekly Assignment Deadlines</h2>
+            
+            <div class="deadline-info">Week 1: January 26, 2025 (Sunday)</div>
+            <div id="week1-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 2: January 26, 2025 (Sunday)</div>
+            <div id="week2-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 3: February 2, 2025 (Sunday)</div>
+            <div id="week3-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 4: February 9, 2025 (Sunday)</div>
+            <div id="week4-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 5: February 16, 2025 (Sunday)</div>
+            <div id="week5-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 6: March 2, 2025 (Sunday)</div>
+            <div id="week6-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 7: March 2, 2025 (Sunday)</div>
+            <div id="week7-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 8: March 9, 2025 (Sunday)</div>
+            <div id="week8-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 9: March 18, 2025 (Tuesday)</div>
+            <div id="week9-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 10: March 30, 2025 (Sunday)</div>
+            <div id="week10-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 11: March 30, 2025 (Sunday)</div>
+            <div id="week11-timer" class="timer"></div>
+            
+            <div class="deadline-info">Week 12: April 6, 2025 (Sunday)</div>
+            <div id="week12-timer" class="timer"></div>
+        </div>
+
+        <!-- Score Formula Section -->
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section">
+                    <h3>Graded Assignments (GA)</h3>
+                    <div class="formula-item">
+                        <div class="latex-formula">
+                            \[ \text{GA} = \frac{\sum \text{Best 3 out of 4 Assignments}}{3} \]
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Each assignment worth 10 marks
+                        </div>
+                        <div class="formula-note">
+                            <i class="fas fa-arrow-right"></i> Total contribution: 30% of final score
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-section" style="max-width: 100%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 10px; border: 0px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h3>Final Score Formula</h3>
+                    <div class="final-formula">
+                        <div style="font-size: 1.1em; line-height: 2; position: relative; text-align: left;">
+                            \[
+                            T = \underbrace{0.3 \times \text{GA}}_{\text{30 marks}} + 
+                            \underbrace{0.2 \times \text{Q2}}_{\text{20 marks}} +
+                            \underbrace{0.2 \times \text{ROE}}_{\text{20 marks}} +
+                            \underbrace{0.3 \times F}_{\text{30 marks}} = 100 \text{ marks}
+                            \]
+                        </div>
+                    </div>
+                    <div class="formula-explanation" style="margin-top: 20px; font-size: 1em;">
+                        <strong>Where:</strong>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li><strong>GA:</strong> Best 3 out of 4 Graded Assignments</li>
+                            <li><strong>Q2:</strong> Quiz 2 Score</li>
+                            <li><strong>ROE:</strong> Remote Online Exam Score</li>
+                            <li><strong>F:</strong> Final Exam Score</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grade Calculator -->
+        <h2 style="color: #000000; font-weight: 600; margin-left: 2%">Grade Calculator</h2>
+        <div class="calculator-container" style="margin: 0 20px;">
+            <div class="calculator-box">
+                <form id="gradeCalculator">
+                    <div class="input-group">
+                        <label for="ga1">GA1 Score (out of 100): </label>
+                        <input type="number" id="ga1" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ga2">GA2 Score (out of 100): </label>
+                        <input type="number" id="ga2" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ga3">GA3 Score (out of 100): </label>
+                        <input type="number" id="ga3" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ga4">GA4 Score (out of 100): </label>
+                        <input type="number" id="ga4" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="quiz2">Quiz 2 Score (out of 100): </label>
+                        <input type="number" id="quiz2" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="roe">ROE Score (out of 100): </label>
+                        <input type="number" id="roe" min="0" max="100" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="final">Final Exam Score (out of 100): </label>
+                        <input type="number" id="final" min="0" max="100" step="0.01" required>
+                    </div>
+                    <button type="button" 
+                            onclick="calculateBDMGrade()" 
+                            style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer; width: 100%;"
+                            onmouseover="this.style.backgroundColor='#d9d9d9';" 
+                            onmouseout="this.style.backgroundColor='#182f48';">
+                        Calculate Grade
+                    </button>
+                </form>
+            </div>
+            <div id="gradeResult" class="result-box">
+                <p>Results will appear here.</p>
+            </div>
+        </div>
+        <!-- Important Information -->
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Important Information</h2>
+            <div class="info-box">
+                <div class="exam-info">
+                    <h3>Remote Online Exam (ROE)</h3>
+                    <ul>
+                        <li>Spreadsheet-based exam</li>
+                        <li>Open Internet</li>
+                        <li>Time Challenge (30-45 mins)</li>
+                    </ul>
+                </div>
+
+                <p><strong>Eligibility Criteria for Final Exam:</strong></p>
+                <ul>
+                    <li>Submit at least one of first two graded assignments (GA1 or GA2)</li>
+                    <li>AND</li>
+                    <li>Average of best 2 out of first 3 GA scores ≥ 40/100</li>
+                </ul>
+
+                <p><strong>Eligibility for Final Course Grade:</strong></p>
+                <ul>
+                    <li>Must attend the End Term exam</li>
+                    <li>AND</li>
+                    <li>Average of best 3 out of 4 graded assignments ≥ 30</li>
+                </ul>
+                
+                <div class="important-note">
+                    <p>⚠️ Note: No bonus marks available for BDM</p>
+                </div>
+            </div>
+            </div>  
+        </div>
+
+
+    </div>
+
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const deadlines = {
+            'quiz2': '2025-03-16T14:00:00',
+            'endterm': '2025-04-13T09:00:00',
+            'week1': '2025-01-26T23:59:59',
+            'week2': '2025-01-26T23:59:59',
+            'week3': '2025-02-02T23:59:59',
+            'week4': '2025-02-09T23:59:59',
+            'week5': '2025-02-16T23:59:59',
+            'week6': '2025-03-02T23:59:59',
+            'week7': '2025-03-02T23:59:59',
+            'week8': '2025-03-09T23:59:59',
+            'week9': '2025-03-18T23:59:59',
+            'week10': '2025-03-30T23:59:59',
+            'week11': '2025-03-30T23:59:59',
+            'week12': '2025-04-06T23:59:59'
+        };
+
+        function updateTimer(elementId, deadline) {
+            const element = document.getElementById(elementId);
+            
+            function update() {
+                const now = new Date().getTime();
+                const target = new Date(deadline).getTime();
+                const difference = target - now;
+
+                if (difference < 0) {
+                    element.innerHTML = "DEADLINE PASSED";
+                    element.classList.add('passed');
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Initialize all timers
+        Object.entries(deadlines).forEach(([key, deadline]) => {
+            updateTimer(`${key}-timer`, deadline);
+        });
+    </script>
+
+    <script>
+        function calculateBDMGrade() {
+            // Get input values
+            const ga1 = parseFloat(document.getElementById('ga1').value) || 0;
+            const ga2 = parseFloat(document.getElementById('ga2').value) || 0;
+            const ga3 = parseFloat(document.getElementById('ga3').value) || 0;
+            const ga4 = parseFloat(document.getElementById('ga4').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const roe = parseFloat(document.getElementById('roe').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            // Calculate GA component (best 3 out of 4)
+            const assignments = [ga1, ga2, ga3, ga4].sort((a, b) => b - a);
+            const gaAverage = (assignments[0] + assignments[1] + assignments[2]) / 3;
+            const gaComponent = 0.3 * gaAverage;
+
+            // Calculate other components
+            const quiz2Component = 0.2 * quiz2;
+            const roeComponent = 0.2 * roe;
+            const finalComponent = 0.3 * final;
+
+            // Calculate total score
+            const totalScore = gaComponent + quiz2Component + roeComponent + finalComponent;
+
+            // Check eligibility criteria
+            const hasFirstTwoGA = ga1 > 0 || ga2 > 0;
+            const firstThreeGA = [ga1, ga2, ga3].sort((a, b) => b - a);
+            const firstThreeAvg = (firstThreeGA[0] + firstThreeGA[1]) / 2;
+            const gaEligible = firstThreeAvg >= 40;
+            const best3Avg = (assignments[0] + assignments[1] + assignments[2]) / 3;
+            const finalGAEligible = best3Avg >= 30;
+            const hasFinal = final > 0;
+
+            // Create eligibility messages
+            const gaSubmissionMessage = hasFirstTwoGA ?
+                "<span style='color: green;'>✅ At least one of first two assignments submitted</span>" :
+                "<span style='color: red;'>❌ No submission from first two assignments</span>";
+
+            const gaScoreMessage = gaEligible ?
+                "<span style='color: green;'>✅ Best 2 of first 3 GA average ≥ 40/100</span>" :
+                "<span style='color: red;'>❌ Best 2 of first 3 GA average < 40/100</span>";
+
+            const finalGAMessage = finalGAEligible ?
+                "<span style='color: green;'>✅ Best 3 GA average ≥ 30/100</span>" :
+                "<span style='color: red;'>❌ Best 3 GA average < 30/100</span>";
+
+            const finalExamMessage = hasFinal ?
+                "<span style='color: green;'>✅ End term exam attended</span>" :
+                "<span style='color: red;'>❌ End term exam not attended</span>";
+
+            // Determine course status
+            let courseStatus;
+            let statusColor;
+
+            if (!hasFirstTwoGA || !gaEligible) {
+                courseStatus = "FAIL (Final exam eligibility criteria not met)";
+                statusColor = "#dc3545";
+            } else if (!hasFinal || !finalGAEligible) {
+                courseStatus = "FAIL (Course grade eligibility criteria not met)";
+                statusColor = "#dc3545";
+            } else {
+                courseStatus = "PASS (All criteria met)";
+                statusColor = "#28a745";
+            }
+
+            // Use the grade calculator to determine the grade
+            const grade = window.gradeCalculator.determineGrade(totalScore);
+            const gradeInfo = window.gradeCalculator.getGradeInfo(grade);
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <div style="background-color: ${statusColor}; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                        <strong>Course Status: ${courseStatus}</strong>
+                    </div>
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${gaSubmissionMessage}</li>
+                        <li>${gaScoreMessage}</li>
+                        <li>${finalGAMessage}</li>
+                        <li>${finalExamMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>GA Component (30%): ${gaComponent.toFixed(2)}%</li>
+                    <li>Quiz 2 Component (20%): ${quiz2Component.toFixed(2)}%</li>
+                    <li>ROE Component (20%): ${roeComponent.toFixed(2)}%</li>
+                    <li>Final Exam Component (30%): ${finalComponent.toFixed(2)}%</li>
+                    <li><strong>Total Score: ${totalScore.toFixed(2)}/100</strong></li>
+                    <li><strong>Grade: ${grade} (${gradeInfo.points} points)</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            }   
+        };
+    </script>
+    <script src="grade-calculator.js"></script>
+</body>
+</html>
