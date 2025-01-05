@@ -1,205 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="jWeImLd1YXxpNsWdjmKWpykRFR3sscKB0ovst6BcSCc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IITM BS deadline timer</title>
+    <title>About - IITM BS Deadline Timer</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .floating-countdown {
+        .about-container {
+            max-width: 800px;
+            margin: 150px auto;
+            padding: 20px;
+            background: rgba(223, 223, 223, 0.521);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            color: rgb(0, 0, 0);
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #000000;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .projects-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-item a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        .project-description {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .project-item a:hover {
+            color: #000000;
+        }
+
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-links i {
+            margin-right: 8px;
+        }
+
+        .back-button {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 35em;
-            color: rgba(255, 255, 255, 0.425);
-            text-align: center;
-            z-index: 0;
-            pointer-events: none;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 900;  /* Maximum boldness */
-            white-space: nowrap;
-            letter-spacing: 0em;  /* Reset to normal spacing */
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: background 0.3s ease;
         }
 
-        .floating-countdown span {
-            display: inline;
-            margin: 0 2px;
-            letter-spacing: -0.02em;  /* Slightly reduced spacing for numbers */
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        @media (max-width: 768px) {
-            .floating-countdown {
-                font-size: 6em;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -70%);
-                color: rgba(255, 255, 255, 0.9);
-                white-space: nowrap;
-                letter-spacing: 0em;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Top bar -->
-    <header class="top-bar">
-        <img src="athman-logo.png" alt="timerite" class="logo">
-        <a href="about.html" class="about" style="color:white;">About</a>
-    </header>
-    <div class="container" style=" scale: 1.2; margin-top: 150px; margin-bottom: 50px;     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.623) ;">
-    <h1 style="padding:8%; overflow-wrap: break-word;">Introduction</h1>
-    <div class="intro-section" style="color:rgb(0, 0, 0)">
-        <p style="font-size: 1em; padding: 20px;">Welcome to the IITM BS Deadline Tracker! This resource is specifically designed for BS Data Science. It's based on the official grading documents released by IIT Madras every New Term. Please note that I do not own the data displayed here; all rights belong to IIT Madras.</p>
-        <p style="font-size: 1em; padding: 20px;">You can click on a subject to see its deadlines. Each subject page includes:</p>
-        <ul style="font-size: 1em;">
-            <li>Important Dates (like quiz and exam dates)</li>
-            <li>Weekly Assignment Deadlines</li>
-            <li>Score Calculation formulas and explanations</li>
-            <li>Grade Calculator (to estimate your grade)</li>
-            <li>OPPE Information (for programming exams)</li>
-            <li>Course Eligibility Criteria</li>
-            <li>Bonus Information (if applicable)</li>
-            <li>Frequently Asked Questions (FAQs)</li>
-        </ul>
-        <p style="font-size: 1em; padding: 20px;">This tracker is a work in progress, and I'm always striving to keep it updated. If you notice any mistakes or outdated information, please feel free to contact me via the "About" page so I can make the necessary corrections.</p> 
-    </div>
-    </div>
+    <a href="index.html" class="back-button">← Back</a>
 
+    <div class="about-container">
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>Hello! I'm D Haricharan, currently pursuing a BS in Data Science at IIT Madras. I'm at the diploma(2nd year) level of my academic journey.</p>
+            <div class="social-links">
+                <a href="mailto:dharicharan14@gmail.com">
+                    <i class="fa-solid fa-envelope";"></i> dharicharan14@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/d-haricharan" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://www.instagram.com/haridhom" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            </div>
+        </div>
 
-    <!-- Main Content -->
-    <div class="container" style="scale: 1.2; margin-bottom: 150px; margin-top: 180px;">
-        <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Foundation</h1>
-        <div class="countdown-section" onclick="window.location.href='ct.html'">Computational Thinking</div>
-        <div class="countdown-section" onclick="window.location.href='english1.html'">English 1</div>
-        <div class="countdown-section" onclick="window.location.href='english2.html'">English 2</div>
-        <div class="countdown-section" onclick="window.location.href='mathematics1.html'">Mathematics for Data Science 1</div>
-        <div class="countdown-section" onclick="window.location.href='mathematics2.html'">Mathematics for Data Science 2</div>
-        <div class="countdown-section" onclick="window.location.href='python.html'">Introduction to Python Programming</div>
-        <div class="countdown-section" onclick="window.location.href='statistics1.html'">Statistics for Data Science 1</div>
-        <div class="countdown-section" onclick="window.location.href='statistics2.html'">Statistics for Data Science 2</div>
+        <div class="about-section">
+            <h2>My Projects</h2>
+            <ul class="projects-list">
+                <li class="project-item">
+                    <a href="https://timerite.athman.me" target="_blank" style="font-weight: bold;">Timerite</a>
+                </li>
+                <li class="project-item">
+                    <a href="https://jee.athman.me" target="_blank" style="font-weight: bold;">Jee tracker</a>
+                </li>
+                <li class="project-item">
+                    <a href="https://github.com/Haricharan14/EpicPDFCrop" target="_blank" style="font-weight: bold;">EpicPDFCrop</a>
+                    <p class="project-description">A powerful PDF cropping application built with Python. Features an intuitive interface for precise PDF cropping. While it may be resource-intensive on older systems, it offers one of the best cropping experiences available.</p>
+                </li>
+            </ul>
+            <h2>Contact form</h2>
+            <div style="max-width: 100%; overflow-x: auto; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+                <iframe src="https://forms.gle/iYh5Y4VnEzmfWLxn8" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            
+            
+        </div>
     </div>
-
-    <div class="container" style="scale: 1.2; margin-bottom: 230px;">
-        <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Diploma</h1>
-        <div class="countdown-section" onclick="window.location.href='appdev1.html'">Application Development - 1</div>
-        <div class="countdown-section" onclick="window.location.href='appdev2.html'">Application Development - 2</div>
-        <div class="countdown-section" onclick="window.location.href='ba.html'">Business Analytics</div>
-        <div class="countdown-section" onclick="window.location.href='bdm.html'">Business Data Management</div>
-        <div class="countdown-section" onclick="window.location.href='dbms.html'">Database Management System (DBMS)</div>
-        <div class="countdown-section" onclick="window.location.href='java.html'">Programming Concepts using Java</div>
-        <div class="countdown-section" onclick="window.location.href='mlf.html'">Machine Learning Foundations</div>
-        <div class="countdown-section" onclick="window.location.href='mlp.html'">Machine Learning Practice</div>
-        <div class="countdown-section" onclick="window.location.href='mlt.html'">Machine Learning Techniques</div>
-        <div class="countdown-section" onclick="window.location.href='pdsa.html'">Programming Data Structures and Algorithms using Python</div>
-        <div class="countdown-section" onclick="window.location.href='systemcommands.html'">System Commands</div>
-        <div class="countdown-section" onclick="window.location.href='toolsinds.html'">Tools in Data Science</div>
-    </div>
-    
-    <div class="container" style="scale: 1.2; margin-bottom: 100px;">
-        <h1 style="border-bottom-style: solid; padding-bottom: -4px; border-top-style: solid;border-top-width: 0px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px;">Degree</h1>
-        <div class="countdown-section" onclick="window.location.href='AI Search Methods for Problem Solving.html'">AI: Search Methods for Problem Solving</div>
-        <div class="countdown-section" onclick="window.location.href='Algorithmic Thinking in Bioinformatics.html'">Algorithmic Thinking in Bioinformatics</div>
-        <div class="countdown-section" onclick="window.location.href='Big Data & Biological Networks.html'">Big Data & Biological Networks</div>
-        <div class="countdown-section" onclick="window.location.href='Corporate Finance.html'">Corporate Finance</div>
-        <div class="countdown-section" onclick="window.location.href='Data Visualization.html'">Data Visualization</div>
-        <div class="countdown-section" onclick="window.location.href='Deep Learning.html'">Deep Learning</div>
-        <div class="countdown-section" onclick="window.location.href='Deep Learning for CV.html'">Deep Learning for CV</div>
-        <div class="countdown-section" onclick="window.location.href='Deep Learning Practice.html'">Deep Learning Practice</div>
-        <div class="countdown-section" onclick="window.location.href='Financial Forensics.html'">Financial Forensics</div>
-        <div class="countdown-section" onclick="window.location.href='Industry 4.0.html'">Industry 4.0</div>
-        <div class="countdown-section" onclick="window.location.href='Introduction to Big Data.html'">Introduction to Big Data</div>
-        <div class="countdown-section" onclick="window.location.href='Introduction to Natural Language Processing.html'">Introduction to Natural Language Processing (i-NLP)</div>
-        <div class="countdown-section" onclick="window.location.href='Linear Statistical Models.html'">Linear Statistical Models</div>
-        <div class="countdown-section" onclick="window.location.href='Managerial Economics.html'">Managerial Economics</div>
-        <div class="countdown-section" onclick="window.location.href='Mathematical Thinking.html'">Mathematical Thinking</div>
-        <div class="countdown-section" onclick="window.location.href='Operating Systems.html'">Operating Systems</div>
-        <div class="countdown-section" onclick="window.location.href='Programming in C.html'">Programming in C</div>
-        <div class="countdown-section" onclick="window.location.href='Software Engineering.html'">Software Engineering</div>
-        <div class="countdown-section" onclick="window.location.href='Software Testing.html'">Software Testing</div>
-        <div class="countdown-section" onclick="window.location.href='Special Topics in ML.html'">Special topics in ML (Reinforcement Learning)</div>
-        <div class="countdown-section" onclick="window.location.href='Strategies for Professional Growth.html'">Strategies for Professional Growth</div>
-    </div>
-    
 
     
-    <!-- Copyright Footer -->
-    <footer class="copyright">
-        <p>&copy; 2024 Timerite. All rights reserved.</p>
-    </footer>
-
-    <!-- Floating Countdown -->
-    <div class="floating-countdown" id="floatingCountdown">
-        <span id="days-quiz1">0</span>d <span id="hours-quiz1">0</span>h
-    </div>
-    
-
     <script>
         function updateCountdown() {
-            const quiz1Date = new Date("February 23, 2025 9:00:00").getTime();
+            const quiz1Date = new Date("February 23, 2025 00:00:00").getTime();
             const now = new Date().getTime();
-
-            // Calculate time remaining for Quiz 1
             updateTimer(quiz1Date, "quiz1");
         }
 
         function updateTimer(targetDate, quiz) {
             const distance = targetDate - new Date().getTime();
-
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-            // Update the countdown display
             document.getElementById(`days-${quiz}`).textContent = days;
             document.getElementById(`hours-${quiz}`).textContent = hours;
-            document.getElementById(`minutes-${quiz}`).textContent = minutes;
-
-            // If the countdown is over, display a message
             if (distance < 0) {
                 clearInterval(countdownInterval);
                 document.getElementById(`countdown-${quiz}`).textContent = "TIME'S UP!";
             }
         }
 
-        // Update the countdown every minute
         const countdownInterval = setInterval(updateCountdown, 60000);
-        updateCountdown(); // Initial call
+        updateCountdown();
+
     </script>
-
-    <script>
-    $(document).ready(function(){
-        console.log("jQuery is working!");
-        animateDiv();
-    });
-
-    function makeNewPosition(){
-        // Get viewport dimensions (remove the dimension of the div)
-        var h = $(window).height() - 50;
-        var w = $(window).width() - 50;
-        
-        var nh = Math.floor(Math.random() * h);
-        var nw = Math.floor(Math.random() * w);
-        
-        return [nh,nw];    
-    }
-
-    function animateDiv(){
-        var newq = makeNewPosition();
-        console.log("New Position:", newq); // Debugging line
-        var oldq = $('.floating-countdown').offset();
-        var speed = calcSpeed([oldq.top, oldq.left], newq);
-        
-        $('.floating-countdown').animate({ top: newq[0], left: newq[1] }, speed, function(){
-          animateDiv();        
-        });
-    }
-    </script>
+    
 </body>
-
 </html>
