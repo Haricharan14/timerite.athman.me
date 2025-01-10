@@ -229,4 +229,7 @@ h1 {
         color: rgba(255, 255, 255, 0.505);
         white-space: nowrap;
     }
+    .top-bar {
+        background-color: #c6d0da;
+    }
 }
