@@ -231,6 +231,6 @@ h1 {
     }
     .top-bar {
         background-color: #c6d0da81;
-        backdrop-filter: 150px;
+        backdrop-filter: blur(150px)
     }
 }
