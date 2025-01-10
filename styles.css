@@ -230,6 +230,7 @@ h1 {
         white-space: nowrap;
     }
     .top-bar {
-        background-color: #c6d0da;
+        background-color: #c6d0da81;
+        backdrop-filter: 150px;
     }
 }
