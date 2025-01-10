@@ -1169,7 +1169,8 @@ h1 {
         width: 90%;
     }
     .top-bar {
-        background-color: #ced6df;
+        background-color: #ced6dfb3;
+        backdrop-filter: blur(150px);
     }
     
 }
