@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5FVJCBXE8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,111 +12,79 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - IITM BS Deadline Timer</title>
+    <!-- Changed Title -->
+    <title>Contact - IITM BS Deadline Timer</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .about-container {
+        /* Adjusted margin for better centering with less content */
+        .contact-container { /* Renamed class for clarity */
             max-width: 800px;
-            margin: 150px auto;
-            padding: 20px;
+            margin: 80px auto; /* Reduced top margin */
+            padding: 30px; /* Slightly increased padding */
             background: rgba(223, 223, 223, 0.521);
             border-radius: 15px;
             backdrop-filter: blur(10px);
             color: rgb(0, 0, 0);
+            text-align: center; /* Center align the content */
         }
 
-        .about-section {
-            margin-bottom: 40px;
+        .contact-section { /* Renamed class */
+            margin-bottom: 20px; /* Reduced margin */
         }
 
-        .about-section h2 {
+        .contact-section h2 {
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 25px; /* Increased margin */
             color: #000000;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(50, 50, 50, 0.3); /* Darker border */
+            padding-bottom: 15px; /* Increased padding */
+            display: inline-block; /* Allow centering */
         }
 
-        .about-section p {
+        .contact-section p { /* Added style for intro text */
             font-size: 1.2em;
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
+            color: #333; /* Darker text color */
         }
 
-        .projects-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .project-item {
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .project-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-item a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 1.2em;
-            display: block;
-        }
-
-        .project-description {
-            margin-top: 8px;
-            font-size: 0.9em;
-            color: #333;
-            line-height: 1.4;
-        }
-
-        .project-item a:hover {
-            color: #000000;
-        }
-
-        .social-links {
-            margin-top: 40px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-
-        .social-links i {
-            margin-right: 8px;
-        }
+        /* Removed unused project styles */
+        /* Removed unused social link styles */
 
         .back-button {
             position: fixed;
             top: 20px;
             left: 20px;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3); /* Darker background */
             border-radius: 5px;
             color: white;
             text-decoration: none;
             backdrop-filter: blur(5px);
             transition: background 0.3s ease;
+            z-index: 10; /* Ensure it's above other content */
         }
 
         .back-button:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.5); /* Darker hover */
+        }
+
+        /* Ensure iframe container is responsive */
+        .iframe-container {
+             max-width: 100%;
+             overflow: hidden; /* Hide potential overflow */
+             border: 1px solid rgba(0, 0, 0, 0.1); /* Optional subtle border */
+             border-radius: 8px; /* Match container rounding */
+             margin: 0 auto; /* Center the iframe container if needed */
+             max-width: 640px; /* Set max-width similar to Google Form default */
+        }
+
+        .iframe-container iframe {
+            display: block; /* Remove extra space below iframe */
+            margin: 0 auto; /* Center iframe within container */
         }
 
     </style>
@@ -124,50 +92,24 @@
 <body>
     <a href="index.html" class="back-button">← Back</a>
 
-    <div class="about-container">
-        <div class="about-section">
-            <h2>About Me</h2>
-            <p>Hello! I'm D Haricharan, currently pursuing a BS in Data Science at IIT Madras. I'm at the Diploma (2nd year) level of the BS Degree.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/d-haricharan" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-                <a href="https://www.instagram.com/haridhom" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-            </div>
-        </div>
+    <!-- Renamed container class -->
+    <div class="contact-container">
+        <!-- Renamed section class -->
+        <div class="contact-section">
+            <!-- Changed Heading -->
+            <h2>Contact & Feedback</h2>
+            <!-- Added introductory text -->
+            <p>Have questions, suggestions, or feedback about the IITM BS Deadline Timer? <br> Use the form below to get in touch!</p>
 
-        <div class="about-section">
-            <h2>Contact form</h2>
-            <div style="max-width: 100%; overflow-x: auto;">
-                <iframe src="https://forms.gle/iYh5Y4VnEzmfWLxn8" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- Wrapped iframe in a div for better control -->
+            <div class="iframe-container">
+                <!-- Adjusted width/height and removed frameborder -->
+                <iframe src="https://forms.gle/iYh5Y4VnEzmfWLxn8" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Loading…</iframe>
             </div>
-            
-            
         </div>
     </div>
 
-    
-    <script>
-        function updateCountdown() {
-            const quiz1Date = new Date("February 23, 2025 00:00:00").getTime();
-            const now = new Date().getTime();
-            updateTimer(quiz1Date, "quiz1");
-        }
+    <!-- Removed the unnecessary countdown JavaScript block -->
 
-        function updateTimer(targetDate, quiz) {
-            const distance = targetDate - new Date().getTime();
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById(`days-${quiz}`).textContent = days;
-            document.getElementById(`hours-${quiz}`).textContent = hours;
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById(`countdown-${quiz}`).textContent = "TIME'S UP!";
-            }
-        }
-
-        const countdownInterval = setInterval(updateCountdown, 60000);
-        updateCountdown();
-
-    </script>
-    
 </body>
 </html>
